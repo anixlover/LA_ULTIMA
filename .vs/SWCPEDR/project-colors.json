@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "afa19490-a831-4a0f-9246-a5d1135f24d4": {
+      "ProjectGuid": "afa19490-a831-4a0f-9246-a5d1135f24d4",
+      "DisplayName": "WEB",
+      "ColorIndex": 0
+    },
+    "2f89c693-b908-4617-9b8d-7e8ff12d4438": {
+      "ProjectGuid": "2f89c693-b908-4617-9b8d-7e8ff12d4438",
+      "DisplayName": "DAO",
+      "ColorIndex": 1
+    },
+    "0da26af7-5c0c-4d92-a727-16da2e386c5f": {
+      "ProjectGuid": "0da26af7-5c0c-4d92-a727-16da2e386c5f",
+      "DisplayName": "CTR",
+      "ColorIndex": 2
+    },
+    "e1522324-3bf7-4fc4-be07-8c3bed959aeb": {
+      "ProjectGuid": "e1522324-3bf7-4fc4-be07-8c3bed959aeb",
+      "DisplayName": "DTO",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

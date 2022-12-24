@@ -1,0 +1,355 @@
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\WEB.dll.config
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\WEB.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\WEB.pdb
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\csc.exe
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\csc.exe.config
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\csc.rsp
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\csi.exe
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\csi.exe.config
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\csi.rsp
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.AppContext.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Console.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.IO.Compression.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Net.Http.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.ValueTuple.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\vbc.exe
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\vbc.exe.config
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\vbc.rsp
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\BouncyCastle.Crypto.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\CTR.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\DAO_.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\DTO.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\itextsharp.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\itextsharp.xmlworker.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\System.Data.SqlClient.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\CTR.pdb
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\DAO_.pdb
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\DTO.pdb
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\itextsharp.xml
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\System.Data.SqlClient.xml
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\obj\Debug\WEB.csprojAssemblyReference.cache
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\obj\Debug\WEB.csproj.CoreCompileInputs.cache
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\obj\Debug\WEB.csproj.CopyComplete
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\obj\Debug\WEB.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\WEB\obj\Debug\WEB.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\WEB.dll.config
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\WEB.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\WEB.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\csc.exe
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\csc.exe.config
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\csc.rsp
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\csi.exe
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\csi.exe.config
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\csi.rsp
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.AppContext.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Console.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.IO.Compression.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Net.Http.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.ValueTuple.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\vbc.exe
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\vbc.exe.config
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\vbc.rsp
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\VBCSCompiler.exe
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\BouncyCastle.Crypto.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\CTR.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\DAO_.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\DTO.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\itextsharp.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\itextsharp.xmlworker.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\System.Data.SqlClient.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\CTR.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\DAO_.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\DTO.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\itextsharp.xml
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\System.Data.SqlClient.xml
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\obj\Debug\WEB.csprojAssemblyReference.cache
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\obj\Debug\WEB.csproj.CoreCompileInputs.cache
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\obj\Debug\WEB.csproj.CopyComplete
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\obj\Debug\WEB.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\WEB\obj\Debug\WEB.pdb
+D:\Progra_Prueba 2\WEB\bin\WEB.dll.config
+D:\Progra_Prueba 2\WEB\bin\WEB.dll
+D:\Progra_Prueba 2\WEB\bin\WEB.pdb
+D:\Progra_Prueba 2\WEB\bin\roslyn\csc.exe
+D:\Progra_Prueba 2\WEB\bin\roslyn\csc.exe.config
+D:\Progra_Prueba 2\WEB\bin\roslyn\csc.rsp
+D:\Progra_Prueba 2\WEB\bin\roslyn\csi.exe
+D:\Progra_Prueba 2\WEB\bin\roslyn\csi.exe.config
+D:\Progra_Prueba 2\WEB\bin\roslyn\csi.rsp
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Progra_Prueba 2\WEB\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.AppContext.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Collections.Immutable.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Console.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Globalization.Calendars.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.IO.Compression.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.IO.FileSystem.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Net.Http.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Net.Sockets.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Reflection.Metadata.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.ValueTuple.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Xml.XPath.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Progra_Prueba 2\WEB\bin\roslyn\vbc.exe
+D:\Progra_Prueba 2\WEB\bin\roslyn\vbc.exe.config
+D:\Progra_Prueba 2\WEB\bin\roslyn\vbc.rsp
+D:\Progra_Prueba 2\WEB\bin\roslyn\VBCSCompiler.exe
+D:\Progra_Prueba 2\WEB\bin\roslyn\VBCSCompiler.exe.config
+D:\Progra_Prueba 2\WEB\bin\BouncyCastle.Crypto.dll
+D:\Progra_Prueba 2\WEB\bin\CTR.dll
+D:\Progra_Prueba 2\WEB\bin\DAO_.dll
+D:\Progra_Prueba 2\WEB\bin\DTO.dll
+D:\Progra_Prueba 2\WEB\bin\itextsharp.dll
+D:\Progra_Prueba 2\WEB\bin\itextsharp.xmlworker.dll
+D:\Progra_Prueba 2\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Progra_Prueba 2\WEB\bin\System.Data.SqlClient.dll
+D:\Progra_Prueba 2\WEB\bin\CTR.pdb
+D:\Progra_Prueba 2\WEB\bin\DAO_.pdb
+D:\Progra_Prueba 2\WEB\bin\DTO.pdb
+D:\Progra_Prueba 2\WEB\bin\itextsharp.xml
+D:\Progra_Prueba 2\WEB\bin\System.Data.SqlClient.xml
+D:\Progra_Prueba 2\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Progra_Prueba 2\WEB\obj\Debug\WEB.csprojAssemblyReference.cache
+D:\Progra_Prueba 2\WEB\obj\Debug\WEB.csproj.CoreCompileInputs.cache
+D:\Progra_Prueba 2\WEB\obj\Debug\WEB.csproj.CopyComplete
+D:\Progra_Prueba 2\WEB\obj\Debug\WEB.dll
+D:\Progra_Prueba 2\WEB\obj\Debug\WEB.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\WEB.dll.config
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\WEB.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\WEB.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csc.exe
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csc.exe.config
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csc.rsp
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csi.exe
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csi.exe.config
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csi.rsp
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.AppContext.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Console.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.Compression.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Net.Http.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Net.Sockets.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.ValueTuple.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.XPath.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\vbc.exe
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\vbc.exe.config
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\vbc.rsp
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\VBCSCompiler.exe
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\BouncyCastle.Crypto.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\CTR.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DAO_.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DTO.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\itextsharp.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\itextsharp.xmlworker.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\System.Data.SqlClient.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\CTR.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DAO_.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DTO.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\itextsharp.xml
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\System.Data.SqlClient.xml
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.csproj.CopyComplete
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\WEB.dll.config
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\WEB.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\WEB.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csc.exe
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csc.exe.config
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csc.rsp
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csi.exe
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csi.exe.config
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\csi.rsp
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.Managed.Core.targets
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.AppContext.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Collections.Immutable.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Console.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Globalization.Calendars.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.Compression.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.FileSystem.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Net.Http.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Net.Sockets.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Reflection.Metadata.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.ValueTuple.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.XmlDocument.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.XPath.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\vbc.exe
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\vbc.exe.config
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\vbc.rsp
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\VBCSCompiler.exe
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\roslyn\VBCSCompiler.exe.config
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\BouncyCastle.Crypto.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\CTR.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DAO_.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DTO.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\itextsharp.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\itextsharp.xmlworker.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\System.Data.SqlClient.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\CTR.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DAO_.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\DTO.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\itextsharp.xml
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\System.Data.SqlClient.xml
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.csproj.AssemblyReference.cache
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.csproj.CoreCompileInputs.cache
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.csproj.CopyComplete
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\WEB\obj\Debug\WEB.pdb

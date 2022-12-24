@@ -1,0 +1,55 @@
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\bin\Debug\CTR.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\bin\Debug\CTR.pdb
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\bin\Debug\DAO_.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\bin\Debug\DTO.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\bin\Debug\DAO_.pdb
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\bin\Debug\DTO.pdb
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\obj\Debug\CTR.csprojAssemblyReference.cache
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\obj\Debug\CTR.csproj.CoreCompileInputs.cache
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\obj\Debug\CTR.csproj.CopyComplete
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\obj\Debug\CTR.dll
+C:\Users\Mirko\Source\Repos\tp_2020_2_2\CTR_\obj\Debug\CTR.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\bin\Debug\CTR.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\bin\Debug\CTR.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\bin\Debug\DAO_.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\bin\Debug\DTO.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\bin\Debug\DAO_.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\bin\Debug\DTO.pdb
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\obj\Debug\CTR.csprojAssemblyReference.cache
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\obj\Debug\CTR.csproj.CoreCompileInputs.cache
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\obj\Debug\CTR.csproj.CopyComplete
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\obj\Debug\CTR.dll
+C:\Users\Userxx\Desktop\tp_2020_2_2\CTR_\obj\Debug\CTR.pdb
+D:\Progra_Prueba 2\CTR_\bin\Debug\CTR.dll
+D:\Progra_Prueba 2\CTR_\bin\Debug\CTR.pdb
+D:\Progra_Prueba 2\CTR_\bin\Debug\DAO_.dll
+D:\Progra_Prueba 2\CTR_\bin\Debug\DTO.dll
+D:\Progra_Prueba 2\CTR_\bin\Debug\DAO_.pdb
+D:\Progra_Prueba 2\CTR_\bin\Debug\DTO.pdb
+D:\Progra_Prueba 2\CTR_\obj\Debug\CTR.csprojAssemblyReference.cache
+D:\Progra_Prueba 2\CTR_\obj\Debug\CTR.csproj.CoreCompileInputs.cache
+D:\Progra_Prueba 2\CTR_\obj\Debug\CTR.csproj.CopyComplete
+D:\Progra_Prueba 2\CTR_\obj\Debug\CTR.dll
+D:\Progra_Prueba 2\CTR_\obj\Debug\CTR.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\CTR.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\CTR.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DAO_.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DTO.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DAO_.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DTO.pdb
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.csproj.CopyComplete
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.dll
+C:\Users\usuario\Desktop\TesisBase\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\CTR.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\CTR.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DAO_.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DTO.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DAO_.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\bin\Debug\DTO.pdb
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.csproj.AssemblyReference.cache
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.csproj.CoreCompileInputs.cache
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.csproj.CopyComplete
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.dll
+E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\CTR_\obj\Debug\CTR.pdb
