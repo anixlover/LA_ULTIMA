@@ -43,3 +43,12 @@ E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DAO_\obj\Debug\DAO.csproj.C
 E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DAO_\obj\Debug\DAO.csproj.CopyComplete
 E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DAO_\obj\Debug\DAO_.dll
 E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DAO_\obj\Debug\DAO_.pdb
+E:\LA_ULTIMA\DAO_\bin\Debug\DAO_.dll
+E:\LA_ULTIMA\DAO_\bin\Debug\DAO_.pdb
+E:\LA_ULTIMA\DAO_\bin\Debug\DTO.dll
+E:\LA_ULTIMA\DAO_\bin\Debug\DTO.pdb
+E:\LA_ULTIMA\DAO_\obj\Debug\DAO.csproj.AssemblyReference.cache
+E:\LA_ULTIMA\DAO_\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+E:\LA_ULTIMA\DAO_\obj\Debug\DAO.csproj.CopyComplete
+E:\LA_ULTIMA\DAO_\obj\Debug\DAO_.dll
+E:\LA_ULTIMA\DAO_\obj\Debug\DAO_.pdb

@@ -870,13 +870,13 @@ namespace WEB
         protected global::System.Web.UI.UpdatePanel updBotonEnviar;
 
         /// <summary>
-        /// Control btnboleta1.
+        /// Control divbtnboleta1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnboleta1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divbtnboleta1;
 
         /// <summary>
         /// Control btnboleta.

@@ -172,7 +172,9 @@
                                     <div class="input-group">
                                         <asp:UpdatePanel ID="upRUC" runat="server" UpdateMode="Conditional">
                                             <ContentTemplate>
-                                                <asp:DropDownList class="btn btn-light dropdown-toggle" runat="server" aria-haspopup="true" aria-expanded="false" ID="ddlListRUC" ClientIDMode="Static" AutoPostBack="True" OnSelectedIndexChanged="ddl_Ruc_SelectedIndexChanged">
+                                                <asp:DropDownList class="btn btn-light dropdown-toggle" runat="server" 
+                                                    aria-haspopup="true" aria-expanded="false" ID="ddlListRUC" ClientIDMode="Static" 
+                                                    AutoPostBack="True" OnSelectedIndexChanged="ddl_Ruc_SelectedIndexChanged">
                                                     <%--<asp:ListItem Text="Seleccionar" Selected="True" />--%>
                                                 </asp:DropDownList>
                                             </ContentTemplate>
@@ -284,12 +286,12 @@
                         </asp:Panel>
 
                         <%--ddlTipoMoldura--%>
-                        <div class="col-12" id="idTipoMoldura" runat="server" hidden clientidmode="Static">
+                        <div class="col-12" id="idTipoMoldura" runat="server" clientidmode="Static">
                             <%--hidden--%>
                             <div class="row">
                                 <div class="col-6">
                                     <asp:Label Text="Tipo Moldura:" runat="server" ID="lblTipoMoldura"></asp:Label>
-                                    <asp:DropDownList runat="server" ID="ddlTipoMoldura" class="form-control" AutoPostBack="True">
+                                    <asp:DropDownList runat="server" ID="ddlTipoMoldura" class="form-control">
                                     </asp:DropDownList>
                                 </div>
                                 <div class="col-6">
@@ -594,7 +596,7 @@
                                 <div>
                                     <%--<asp:Label ID="lblimporteigv" runat="server">Importe total:</asp:Label>--%>
                                     <div class="form-inline">
-                                        <asp:TextBox ID="txtimporteigv" class="form-control autonumber" runat="server" ClientIDMode="Static"></asp:TextBox>
+                                        <asp:TextBox ID="txtimporteigv" class="form-control autonumber" runat="server" ClientIDMode="Static" ReadOnly></asp:TextBox>
                                     </div>
                                 </div>
                             </ContentTemplate>
@@ -611,19 +613,24 @@
                         </div>
                         <br />
                         <%--btn send n pay boleta--%>
-                        <asp:UpdatePanel runat="server" ID="updBotonEnviar">
+                        <asp:UpdatePanel runat="server" ID="updBotonEnviar" ChildrenAsTriggers="true">
                             <ContentTemplate>
-                                <div runat="server" id="btnboleta1">
-                                    <asp:LinkButton Text="Pagar" ID="btnboleta" runat="server" OnClick="btnboleta_Click"
-                                        class="btn btn-primary waves-effect waves-light">
+                                <div runat="server" id="divbtnboleta1">
+                                    <asp:LinkButton ID="btnboleta" runat="server" OnClick="btnboleta_Click1"
+                                        class="btn btn-primary waves-effect waves-light">Pagar<span class="btn-label-right"><i class="mdi mdi-content-save-edit"></i></span>
                                     </asp:LinkButton>
                                 </div>
                             </ContentTemplate>
                         </asp:UpdatePanel>
+                        
+										<Triggers>
+											<asp:AsyncPostBackTrigger ControlID="btnboleta" EventName="Click" />
+										</Triggers>
                         <br />
                         <%--btn send n print factura--%>
                         <div runat="server" id="btnfactura1">
-                            <asp:LinkButton Text="Imprimir" runat="server" ID="btnfactura" class="btn btn-primary waves-effect waves-light" OnClick="btnfactura_Click">
+                            <asp:LinkButton runat="server" ID="btnfactura" class="btn btn-primary waves-effect waves-light" OnClick="btnfactura_Click">
+                            Imprimir<span class="btn-label-right"><i class="mdi mdi-content-save-edit"></i></span>
                             </asp:LinkButton>
                         </div>
                     </div>
