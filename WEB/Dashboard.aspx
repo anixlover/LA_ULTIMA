@@ -16,23 +16,32 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 <div class="row mt-2">
-    <div class="col-sm-12 col-md-6 col-xl-6">
-
-    </div>
-    <div class="col-sm-12 col-md-6 col-xl-6">
-        <div class="card-box" id="visualizaciones">
+    <div class="col-sm-12 col-md-4 col-xl-4">
+        <div class="card-box" id="ventas-catalogo">
             <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" 
-                title="Número de visitas en el mes"></i>
-            <h4 class="mt-0 font-16">Usuarios Recientes</h4>
+                title="Ventas del mes"></i>
+            <h4 class="mt-0 font-16">Estado de ventas</h4>
             <h2 class="text-primary my-3 text-center">567</h2>
-            <p class="text-muted mb-0">Usuarios Totales: <span id="total-visualizaciones">345</span></p>
+            <p class="text-muted mb-0">Ventas Totales: <span id="total-ventas-catalogo">345</span></p>
         </div>
     </div>
-    <div class="col-sm-12 col-md-6 col-xl-6">
-
+    <div class="col-sm-12 col-md-4 col-xl-4">
+        <div class="card-box" id="ventas-personalizada">
+            <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" 
+                title="Ventas del mes"></i>
+            <h4 class="mt-0 font-16">Estado de ventas</h4>
+            <h2 class="text-primary my-3 text-center">567</h2>
+            <p class="text-muted mb-0">Ventas Totales: <span id="total-ventas-personalizada">345</span></p>
+        </div>
     </div>
-    <div class="col-sm-12 col-md-6 col-xl-6">
-
+    <div class="col-sm-12 col-md-4 col-xl-4">
+        <div class="card-box" id="ingresos">
+            <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" 
+                title="Ingresos totales del mes"></i>
+            <h4 class="mt-0 font-16">Los ingresos totales</h4>
+            <h2 class="text-primary my-3 text-center">567</h2>
+            <p class="text-muted mb-0">Ingresos Totales: <span id="total-ingresos">345</span></p>
+        </div>
     </div>
     <div class="col-sm-12 col-md-6 col-xl-4">
 
@@ -41,7 +50,34 @@
 
     </div>
     <div class="col-sm-12 col-md-6 col-xl-8">
-
+        <div class="card">
+            <div class="card-body">
+                <div class="card-widgets">
+                    <a href="javascript: void(0);" data-toggle="reload"><i class="mdi mdi-refresh"></i></a>
+                    <a data-toggle="collapse" href="#productos-vendidos" role="button" aria-expanded="false" aria-controls="productos-vendidos"><i class="mdi mdi-minus"></i></a>
+                    <a href="javascript: void(0);" data-toggle="remove"><i class="mdi mdi-close"></i></a>
+                </div>
+                <h4 class="header-title mb-0">Productos Más Vendidos</h4>
+                <div class="collapse pt-3 show" id="productos-vendidos">
+                    <div class="table-responsive">
+                        <table class="table table-hover table-centered mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Tipo de Producto</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>Monto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-sm-12 col-md-6 col-xl-4">
         <div class="card">
@@ -67,7 +103,7 @@
                                 <input type="text" id="todo-input-text" name="todo-input-text" class="form-control"
                                     placeholder="Agregar una nueva tarea pendiente" required/>
                                 <div class="invalid-feedback">
-                                    Ingrese el nombre ed su tarea
+                                    Ingrese el nombre de su tarea
                                 </div>
                             </div>
                             <div class="col-auto">
