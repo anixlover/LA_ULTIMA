@@ -66,7 +66,7 @@
                                             <asp:Label ID="lblPrecioItems" runat="server" Text='<%# Eval("DMU_Precio") %>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="Agregar al carrito de compras">
+                                    <asp:TemplateField HeaderText="Agregar a la solicitud">
                                         <ItemTemplate>
                                             <div style="text-align: center">
                                                 <asp:CheckBox ID="CheckBox1" runat="server" />
