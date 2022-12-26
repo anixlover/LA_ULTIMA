@@ -55,11 +55,11 @@
                                             <%--<asp:BoundField DataField="PK_IMU_Cod" Visible="false" HeaderText="NoVisible" />--%>
                                             <asp:TemplateField HeaderText="Detalles">
                                                 <ItemTemplate>
-                                                    <asp:Button runat="server" Text="Evaluar"  Visible='<%# ValidacionEstado(Eval("VSE_Nombre").ToString()) %>' CommandName="Evaluar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" />
-                                                    <asp:Button runat="server" Text="Ver"  CommandName="Ver detalles" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
-                                                    <asp:Button runat="server" Text="Asignar Fecha"  CommandName="asignar fecha" Visible='<%# ValidacionEstado2(Eval("VSE_Nombre").ToString()) %>' CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-primary" />
-                                                    <asp:Button runat="server" Text="Recibir Restante"  CommandName="Recibir Restante" Visible='<%# validacionEstado4(Eval("PK_IS_Cod").ToString()) %>' CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-primary" data-toggle="modal" data-target="#modalRestante"/>
-                                                    <asp:Button runat="server" Text="Despachar"  CommandName="despachar" Visible='<%# validacionEstado3(Eval("PK_IS_Cod").ToString()) %>' CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-primary"/>
+                                                    <asp:LinkButton runat="server" ToolTip="Evaluar" Text='<i class="mdi mdi-file-find"></i>' Visible='<%# ValidacionEstado(Eval("VSE_Nombre").ToString()) %>' CommandName="Evaluar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" />
+                                                    <asp:LinkButton runat="server" ToolTip="Ver detalle" Text='<i class="mdi mdi-eye"></i>' CommandName="Ver detalles" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
+                                                    <asp:LinkButton runat="server" ToolTip="Asignar fecha" Text='<i class="mdi mdi-calendar-plus"></i>' CommandName="asignar fecha" Visible='<%# ValidacionEstado2(Eval("VSE_Nombre").ToString()) %>' CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-primary" />
+                                                    <asp:LinkButton runat="server" ToolTip="Recibir restante" Text='<i class="mdi mdi-google-circles-group"></i>' CommandName="Recibir Restante" Visible='<%# validacionEstado4(Eval("PK_IS_Cod").ToString()) %>' CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-primary" data-toggle="modal" data-target="#modalRestante"/>
+                                                    <asp:LinkButton runat="server" ToolTip="Despachar" Text='<i class="mdi mdi-truck-fast"></i>' CommandName="despachar" Visible='<%# validacionEstado3(Eval("PK_IS_Cod").ToString()) %>' CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-primary"/>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
                                         </Columns>

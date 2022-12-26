@@ -59,7 +59,7 @@ namespace WEB
                     //string Nombre = colsNoVisible[1].ToString();
                     int index = Convert.ToInt32(e.CommandArgument);
                     GridViewRow row = gvCatalogo.Rows[index];
-                    Button b = (Button)row.FindControl("btnGetMoldura");
+                    //Button b = (Button)row.FindControl("btnGetMoldura");
                     string id = row.Cells[1].Text;                   
                     lblId.Text = id;
                     objDtoMoldura.PK_IM_Cod = int.Parse(id);

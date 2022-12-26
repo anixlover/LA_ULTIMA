@@ -24,6 +24,13 @@
                     <input type="hidden" runat="server" id="valorObtenido" clientidmode="Static" />
                     <div class="card">
                         <div class="body">
+                            <button type="button" onclick="" class="btn btn-danger waves-effect" style="padding-right: 0px; border-color: #323a46; background-color: #323a46">
+                                <a href="javascript:history.back()" style="color: white">
+                                    <span class="btn-label" style="margin-right: 0px">
+                                        <i class="mdi mdi-keyboard-backspace"></i>
+                                    </span>
+                                </a>
+                            </button>
                             <asp:UpdatePanel ID="UpdateDetalleSolicitudes" runat="server">
                                 <ContentTemplate>
                                     <br />
@@ -85,9 +92,7 @@
 
 
                                 <%--boton regresar--%>
-                                <button type="button" onclick="" class="btn btn-danger waves-effect">
-                                    <a href="javascript:history.back()" style="color: white"><span class="btn-label"><i class="mdi dripicons-return"></i></span>Volver Atrás</a>
-                                </button>
+                               
                                 <%--end boton regresar--%>
                         
                         </div>

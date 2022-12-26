@@ -65,13 +65,12 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-4">
-                            <div class="row-cols-lg-4">
+                        <div class="col-lg-12">
+                            <div class="row-cols-lg-12">
                                 <br />
                                 <div align="center">
                                     <div class="row" style="color: #ff585b; font-weight: bold; font-style: inherit;">
                                         <h4>No Cuenta:191-96831044-0-33  </h4>
-                                        <asp:Label ID="Label1" runat="server" Text="0.00"></asp:Label>
                                     </div>
 
                                 </div>
@@ -83,7 +82,7 @@
                                                 <img src='ObtieneImagen.ashx?id=<%# Eval("PK_IM_Cod")%>' height="80px" width="80px" />
                                             </ItemTemplate>
                                         </asp:TemplateField>
-                                        <asp:BoundField DataField="PK_IM_Cod"  HeaderText="Coóigo de Moldura" />
+                                        <asp:BoundField DataField="PK_IM_Cod"  HeaderText="Código de Moldura" />
                                         <asp:BoundField DataField="VM_Descripcion"  HeaderText="Descripción de Moldura" />
                                         <asp:BoundField DataField="VTM_Nombre"  HeaderText="Tipo de Moldura" />
                                         <asp:BoundField DataField="IMU_Cantidad"  HeaderText="Cantidad" />
@@ -91,7 +90,7 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <div class="row-cols-lg-4">
+                            <div class="row-cols-lg-12">
                                 <asp:GridView ID="gvPersonalizado" runat="server" DataKeyNames="PK_IS_Cod" AutoGenerateColumns="False"
                                     EmptyDataText="No existen registros" ShowHeaderWhenEmpty="True">
                                     <Columns>
@@ -110,12 +109,12 @@
                                 </asp:GridView>
                             </div>
                             <br />
-                            <div class="row" style="color: #008000; font-weight: bold; font-style: inherit;">
-                                <h3>Total: S/. </h3>
-                                <asp:Label ID="lblcosto" runat="server" Text="0.00"></asp:Label>
+                            <div class="row" style="font-weight: bold; font-size: 20px; font-style: inherit; justify-content: end;">
+                                <asp:Label runat="server" Text="0.00">Total: S/.</asp:Label>
+                                <asp:Label ID="lblcosto" style="color: #008000;" runat="server" Text="0.00"></asp:Label>
                             </div>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-12">
                             <div class="row">
                                 <asp:FileUpload ID="FileUpload1" runat="server" accept="image/*" onchange="leerImagen(this);" data-plugins="dropify" data-height="300" />
                             </div>
@@ -124,7 +123,7 @@
                                 <ContentTemplate>
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <asp:RadioButton ID="rbBoleta" runat="server" AutoPostBack="True" Text="Boleta" GroupName="pago" OnCheckedChanged="rbBoleta_CheckedChanged" />
+                                            <asp:RadioButton ID="rbBoleta" runat="server" AutoPostBack="True" Text="Boleta" Checked="true" GroupName="pago" OnCheckedChanged="rbBoleta_CheckedChanged" />
                                         </div>
                                         <div class="col-lg-6">
                                             <asp:RadioButton ID="rbFactura" runat="server" AutoPostBack="True" GroupName="pago" Text="Factura" OnCheckedChanged="rbFactura_CheckedChanged" />
@@ -132,7 +131,7 @@
                                     </div>
                                     <div class="row">
                                         <label for="heard">Número de operación: <span class="text-danger">*</span></label>
-                                        <asp:TextBox ID="txtNumOP" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtNumOP" runat="server" CssClass="form-control" MaxLength="13"></asp:TextBox>
                                     </div>
                                     <br />
                                     <div class="row">

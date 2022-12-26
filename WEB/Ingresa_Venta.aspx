@@ -100,7 +100,7 @@
             </div>
         </div>
         <%--Tipo de venta--%>
-        <div class="row">
+        <div class="row" style="display: none">
             <div class="col-12">
                 <div class="page-title-box">
                     <div class="card-box">
