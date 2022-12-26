@@ -56,7 +56,7 @@
                             <ContentTemplate>
                                 <asp:Button ID="btnRegistrar" CssClass="btn-lg btn-primary" runat="server" Text="Registrar" OnClick="btnRegistrar_Click" />
                                 &nbsp;
-                                <asp:Button ID="EnviarCorreo2" CssClass="btn-lg btn-secondary" runat="server" Text="EnviarCorreo" OnClick="EnviarCorreo_Click"/>
+                                <%--<asp:Button ID="EnviarCorreo2" CssClass="btn-lg btn-secondary" runat="server" Text="EnviarCorreo" OnClick="EnviarCorreo_Click"/>--%>
                                 <asp:Button ID="btnCancelar" CssClass="btn-lg btn-secondary" runat="server" Text="Cancelar" />
                             </ContentTemplate>
                         </asp:UpdatePanel>

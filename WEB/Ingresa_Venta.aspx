@@ -167,7 +167,7 @@
                                 <br />
 
                                 <%--ddl RUC existente--%>
-                                <div class="form-group mb-3" id="divSelectRucHide" runat="server" clientidmode="Static">
+                                <div class="form-group mb-3" id="divSelectRucHide" runat="server" style="display: none" clientidmode="Static">
                                     <asp:HiddenField runat="server" ID="HiddenSelectRUC" ClientIDMode="Static" />
                                     <div class="input-group">
                                         <asp:UpdatePanel ID="upRUC" runat="server" UpdateMode="Conditional">
@@ -183,8 +183,8 @@
                                 </div>
 
                                 <%--RUC input--%>
-                                <asp:Label Text="Ingrese RUC nuevo: " runat="server" ID="lblRUCnuevo" ClientIDMode="Static"></asp:Label>
-                                <div class="form-inline" id="divIngresarRucHide" runat="server">
+                                <asp:Label Text="Ingrese RUC nuevo: " runat="server" style="display: none" ID="lblRUCnuevo" ClientIDMode="Static"></asp:Label>
+                                <div class="form-inline" id="divIngresarRucHide" runat="server" style="display: none">
                                     <asp:HiddenField runat="server" ID="HiddenIngresaRUC" ClientIDMode="Static" />
                                     <div class="form-group">
                                         <asp:Panel runat="server" ID="panelRUC">
@@ -194,8 +194,8 @@
                                             </div>
                                         </asp:Panel>
                                     </div>
-                                    <div class="form-group mx-sm-3">
-                                        <asp:UpdatePanel runat="server" ID="upBotonAñadirRuc" UpdateMode="Conditional">
+                                    <div class="form-group mx-sm-3" style="display: none">
+                                        <asp:UpdatePanel runat="server"  ID="upBotonAñadirRuc" UpdateMode="Conditional">
                                             <ContentTemplate>
                                                 <asp:LinkButton ID="btnIngresarRuc" Visible="true" ClientIDMode="Static" class="btn btn-primary waves-effect waves-light" runat="server" OnClick="btnIngresarRuc_Click">
                                         Agregar<span class="btn-label-right"><i class="mdi mdi-content-save-edit"></i></span>

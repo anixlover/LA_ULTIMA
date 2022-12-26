@@ -47,7 +47,7 @@
                         <img class="d-block img-fluid" src="../assets/images/small/Portada1.png" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="../assets/images/ANA2.png" alt="Second slide">
+                        <img class="d-block img-fluid" src="../assets/images/ANA.png" alt="Second slide">
                     </div>
                     <div class="carousel-item">
                         <img class="d-block img-fluid" src="../assets/images/ANA4.png" alt="Third slide">
