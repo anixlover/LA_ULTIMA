@@ -32,6 +32,57 @@ namespace CTR
             
         }
 
+        public List<DTOProductoVendido> ObtenerProductosVendidos()
+        {
+            try
+            {
+                return daoVisualizacion.ObtenerProductosVendidos();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public DTOVentaCatalogoDashboard ObtenerVentasPorCatalogo()
+        {
+            try
+            {
+                return daoVisualizacion.ObtenerVentasCatalogo();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DTOVentaPersonalizadaDashboard ObtenerVentasPersonalizadas()
+        {
+            try
+            {
+                return daoVisualizacion.ObtenerVentasPersonalizadas();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public DTOIngresoDashboard ObtenerIngresos()
+        {
+            try
+            {
+                return daoVisualizacion.ObtenerIngresos();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public DTOVisualizacionDashboard ObtenerVisualizaciones()
         {
             try

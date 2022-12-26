@@ -29,5 +29,49 @@ namespace WEB
 
             return visualizaciones;
         }
+
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static DTOVentaCatalogoDashboard ObtenerVentasPorCatalogo()
+        {
+            var ctrVisualizacion = new CtrVisualizacion();
+
+            var ventasPorCatalogo = ctrVisualizacion.ObtenerVentasPorCatalogo();
+
+            return ventasPorCatalogo;
+        }
+
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static DTOVentaPersonalizadaDashboard ObtenerVentasPersonalizadas()
+        {
+            var ctrVisualizacion = new CtrVisualizacion();
+
+            var ventasPersonalizadas = ctrVisualizacion.ObtenerVentasPersonalizadas();
+
+            return ventasPersonalizadas;
+        }
+
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static DTOIngresoDashboard ObtenerIngresos()
+        {
+            var ctrVisualizacion = new CtrVisualizacion();
+
+            var ventasPersonalizadas = ctrVisualizacion.ObtenerIngresos();
+
+            return ventasPersonalizadas;
+        }
+
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static List<DTOProductoVendido> ObtenerProductosVendidos()
+        {
+            var ctrVisualizacion = new CtrVisualizacion();
+
+            var productosVendidos = ctrVisualizacion.ObtenerProductosVendidos();
+
+            return productosVendidos;
+        }
     }
 }
