@@ -55,7 +55,7 @@ namespace WEB
             ddlRUC.Visible = true;
             lblTitulo1.Visible = true;
             chbNuevoRUC.Visible = true;
-            txtNuevoRUC.Visible = true;
+            txtNuevoRUC.Visible = false;
         }
         public void cargarEvento()
         {

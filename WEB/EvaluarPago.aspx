@@ -24,7 +24,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-xl-8 col-lg-12 ">
+                        <div class="col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 ">
                                 <asp:GridView ID="gvDetalles" runat="server" CssClass="table-borderless table table-bordered table-hover" DataKeyNames="PK_IM_Cod" AutoGenerateColumns="False"
                                     EmptyDataText="No existen registros" ShowHeaderWhenEmpty="True" Width="100%"
                                     HeaderStyle-CssClass="thead-dark">
@@ -57,23 +57,23 @@
                                     </Columns>
                                 </asp:GridView>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-xl-4 col-lg-12 ">
+                        <div class="col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 ">
                             <asp:ScriptManager ID="ScriptManager1" runat="server" AsyncPostBackTimeout="3600"></asp:ScriptManager>
                                     <div>
                                         <%--Imagen del producto--%>
                                         <div class="tab-content pt-0">
-                                            <div class="tab-pane active show" id="product-1-item">
-                                                <asp:Image ID="Image1" Height="500px" Width="480px" runat="server" class="rounded" ImageAlign="Middle" />
+                                            <div class="tab-pane active show" id="product-1-item" style="text-align: center">
+                                                <asp:Image ID="Image1" Height="300px" Width="380px" runat="server" class="rounded" ImageAlign="Middle" />
                                             </div>
                                         </div>
                                         <!-- end col -->
 
                                         <%--Numero de operacion--%>
-                                        <h1>No. Operacion: #<asp:Label ID="txtNumOperacion" runat="server"></asp:Label></h1>
+                                        <h3>No. Operacion: #<asp:Label ID="txtNumOperacion" runat="server"></asp:Label></h3>
                                         <%--end numero de operacion--%>
 
                                         <%--Monto--%>
-                                        <h1>Monto: S/.<asp:Label ID="txtmonto" runat="server"></asp:Label></h1>
+                                        <h3>Monto: S/.<asp:Label ID="txtmonto" runat="server"></asp:Label></h3>
                                         <%--end monto--%>
 
                                         <%--ddl decision--%>
@@ -95,13 +95,13 @@
                                         <br>
                                         <%--boton confirmar--%>
                                         <asp:LinkButton ID="btnConfirmar" runat="server" type="button" class="btn btn-success waves-effect waves-light" OnClick="btnConfirmar_Click">
-                                                    <span class="btn-label"></span>Confirmar
+                                                    <i class="mdi mdi-checkbox-marked-circle-outline"></i> Confirmar
                                         </asp:LinkButton>
                                         <%--end boto confirmar--%>
 
                                         <%--boton regresar--%>
                                         <button type="button" onclick="" class="btn btn-danger waves-effect">
-                                            <a href="Administrar_Pedido.aspx" style="color: white"><span class="btn-label"><i class="mdi dripicons-return"></i></span>Volver Atrás</a>
+                                            <a href="Administrar_Pedido.aspx" style="color: white"><i class="mdi dripicons-return"></i> Volver Atrás</a>
                                         </button>
                                         <%--end boton regresar--%>
                                     </div>

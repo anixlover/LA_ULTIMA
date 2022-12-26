@@ -40,7 +40,7 @@
                                 <asp:TemplateField HeaderText="Accion" >
                                     <ItemTemplate>
                                         <asp:Button runat="server" Text="Ver Detalles"  data-toggle="modal" data-target="#modalDetalle"
-                                            CommandName="Ver detalles" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" />
+                                            CommandName="Ver detalles" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
@@ -62,7 +62,7 @@
                                 </p>
                             </div>
                             <div class="modal-body">
-                                   <asp:GridView ID="gvPersonalizado" runat="server" DataKeyNames="PK_IMU_Cod" AutoGenerateColumns="False"
+                              <asp:GridView ID="gvPersonalizado" runat="server" DataKeyNames="PK_IMU_Cod" AutoGenerateColumns="False"
                                 EmptyDataText="No existen registros" ShowHeaderWhenEmpty="True" CssClass="table-borderless table table-bordered table-hover" Width="100%"
                                 OnRowCommand="gvPersonalizado_RowCommand" OnRowDataBound="gvPersonalizado_RowDataBound"
                                 HeaderStyle-CssClass="thead-dark">
@@ -90,7 +90,7 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
-                            </asp:GridView>
+                               </asp:GridView>
                                  <br />
                             <asp:GridView ID="gvDetalles" runat="server" DataKeyNames="PK_IMU_Cod" AutoGenerateColumns="False"
                                 EmptyDataText="No existen registros" ShowHeaderWhenEmpty="True" Width="100%" CssClass="table-borderless table table-bordered table-hover" OnRowDataBound="gvDetalles_RowDataBound" OnRowCommand="gvDetalles_RowCommand">

@@ -44,15 +44,15 @@
                                                 CommandName="Pago" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-soft-blue" />
                                             <asp:Button runat="server" Text="Actualizar" 
                                                 Visible='<%# ValidacionEstado2(Eval("VSE_Nombre").ToString()) %>'
-                                                CommandName="Actualizar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" />
+                                                CommandName="Actualizar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
                                             <asp:Button runat="server" Text="Ver Detalles"  data-toggle="modal" data-target="#modalDetalle"
-                                                CommandName="Ver detalles" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" />
+                                                CommandName="Ver detalles" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
                                             <asp:Button runat="server" Text="Ver proceso"  data-toggle="modal" data-target="#modalDetalle"
                                                 Visible='<%# ValidacionEstado5(Eval("VSE_Nombre").ToString()) %>'
-                                                CommandName="Ver proceso" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" />
+                                                CommandName="Ver proceso" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
                                             <asp:Button runat="server" Text="Ver incidencias" 
                                                 Visible='<%# ValidacionEstado6(Eval("VSE_Nombre").ToString()) %>'
-                                                CommandName="Ver incidencias" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" data-toggle="modal" data-target="#modalIncidencias" />
+                                                CommandName="Ver incidencias" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" data-toggle="modal" data-target="#modalIncidencias" />
                                              <asp:Button runat="server" Text="Aceptar" 
                                                 Visible='<%# ValidacionEstado3(Eval("VSE_Nombre").ToString(),Eval("VS_TipoSolicitud").ToString()) %>'
                                                 CommandName="Aceptar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success"/>

@@ -27,3 +27,9 @@ E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DTO_\obj\Debug\DTO.csproj.A
 E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DTO_\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DTO_\obj\Debug\DTO.dll
 E:\PROGRA_TITES\ProyectoCarpioPara05-PE-SePasaSoloEZ\DTO_\obj\Debug\DTO.pdb
+D:\1.Universidad\TesisJD\LA_ULTIMA\DTO_\bin\Debug\DTO.dll
+D:\1.Universidad\TesisJD\LA_ULTIMA\DTO_\bin\Debug\DTO.pdb
+D:\1.Universidad\TesisJD\LA_ULTIMA\DTO_\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\1.Universidad\TesisJD\LA_ULTIMA\DTO_\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\1.Universidad\TesisJD\LA_ULTIMA\DTO_\obj\Debug\DTO.dll
+D:\1.Universidad\TesisJD\LA_ULTIMA\DTO_\obj\Debug\DTO.pdb
