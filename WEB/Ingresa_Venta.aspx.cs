@@ -54,7 +54,7 @@ namespace WEB
                     ViewState["Records"] = dt;
                     Image1.Visible = true;
                 }
-                //OpcionesTipoMoldura();
+                OpcionesTipoMoldura();
             }
             try
             {
@@ -165,6 +165,7 @@ namespace WEB
         protected void ddlPedidoPor_SelectedIndexChanged(object sender, EventArgs e)
         {
             _log.CustomWriteOnLog("RealizarVenta", "valorddl : " + valorObtenidoRBTN.Value);
+
         }
 
         protected void gvdetalle_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -214,281 +215,7 @@ namespace WEB
 
         protected void btnboleta_Click(object sender, EventArgs e)
         {
-            if (txtmontopagado.Text == "")
-            {
-                Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage18()");
-                return;
-            }
-            if (ddl_TipoComprobante.SelectedValue == "0")
-            {
-                Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage12()");
-                return;
-            }
-            if (txtDocumento.Text == "")
-            {
-                Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage7()");
-                return;
-            }
 
-            try
-            {
-                if (ddlPedidoPor.SelectedValue == "1")
-                {
-                    if (valorObtenidoRBTN.Value == "2" && ddlPedidoPor.SelectedValue == "1")
-                    {
-                        _log.CustomWriteOnLog("valorObtenidoRBTNValue", "valorObtenidoRBTN.Value   : " + valorObtenidoRBTN.Value);
-                        _log.CustomWriteOnLog("valorObtenidoRBTNValue", "valorObtenidoRBTN.Value   : " + ddlPedidoPor.SelectedValue);
-
-                        if (Convert.ToInt32(txtCantidadPersonalizado.Text) <= 30)
-                        {
-                            Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage17()");
-                            return;
-                        }
-
-                        objDtoSolicitud.VS_TipoSolicitud = "Personalizado por Catalogo";
-                        objDtoSolicitud.IS_Cantidad = int.Parse(txtCantidadPersonalizado.Text);
-                        objDtoSolicitud.DS_ImporteTotal = int.Parse(txtimporteigv.Text);
-                        objDtoSolicitud.DTS_FechaRecojo = Calendar1.SelectedDate;
-                        objCtrSolicitud.RegistrarSolicitud_PxC(objDtoSolicitud);
-
-                        for (int i = 0; i < gvdetalle.Rows.Count; i++)
-                        {
-                            string subtotalMoldura = gvdetalle2.Rows[i].Cells[6].Text;
-                            _log.CustomWriteOnLog("RealizarVenta", "subtotalMoldura = " + subtotalMoldura);
-     
-                            objDtoMolduraxUsuario.FK_VU_Dni = txtDocumento.Text; //dni
-                            objDtoMolduraxUsuario.FK_IM_Cod = int.Parse(txtCodProducto.Text);
-                            objDtoMolduraxUsuario.IMU_Cantidad = int.Parse(txtCantidadProducto.Text);
-                            objDtoMolduraxUsuario.DMU_Precio = double.Parse(subtotalMoldura);
-                            objDtoMolduraxUsuario.FK_IS_Cod = 0;
-                            objCtrMolduraxUsuario.registrarNuevaMoldura2(objDtoMolduraxUsuario);
-                        }
-
-                        int ValorDevuelto = objDtoMolduraxUsuario.PK_IMU_Cod;
-                        _log.CustomWriteOnLog("RealizarVenta", "ValorDevuelto = " + ValorDevuelto);
-
-                        int ValorDevuelto2 = objDtoSolicitud.PK_IS_Cod;
-                        objDtoMolduraxUsuario.FK_IS_Cod = ValorDevuelto2;
-                        objCtrMolduraxUsuario.actualizarMXUSol(objDtoMolduraxUsuario);
-                        Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage3()");
-                    }
-                }
-                else
-                {
-                    int pedido;
-                    int montopagado = int.Parse(txtmontopagado.Text);
-                    int montototal = int.Parse(txtimporttot.Text);
-                    if (montopagado < montototal)
-                    {
-                        Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage14()");
-                        return;
-                    }
-                    for (int y = 0; y < gv2.Rows.Count; y++)
-                    {
-                        string cantidad = gv2.Rows[y].Cells[2].Text;
-                        objDtoSolicitud.DS_ImporteTotal = double.Parse(txtimporteigv.Text);
-                        objDtoSolicitud.IS_Cantidad = int.Parse(cantidad);
-                        objCtrSolicitud.RegistrarSolicitud_LD2(objDtoSolicitud);
-                    }
-                    //# de solicitud
-                    int ValorDevuelto = objDtoSolicitud.PK_IS_Cod;
-                    _log.CustomWriteOnLog("RealizarVenta", "ValorDevuelto = " + ValorDevuelto);
-
-                    for (int i = 0; i < gv2.Rows.Count; i++)
-                    {
-                        string codigoMoldura = gv2.Rows[i].Cells[1].Text;
-                        string subtotalMoldura = gv2.Rows[i].Cells[4].Text;
-                        string cantidadMoldura = gv2.Rows[i].Cells[2].Text;
-                        _log.CustomWriteOnLog("RealizarVenta", " item moldura : " + i + "---------------------------------");
-                        _log.CustomWriteOnLog("RealizarVenta", " txtIdentificadorUsuario.Text = " + txtDocumento.Text);
-                        _log.CustomWriteOnLog("RealizarVenta", "codigoMoldura = " + codigoMoldura);
-                        _log.CustomWriteOnLog("RealizarVenta", "cantidadMoldura = " + cantidadMoldura);
-                        _log.CustomWriteOnLog("RealizarVenta", "subtotalMoldura = " + subtotalMoldura);
-
-                        objDtoMoldura.PK_IM_Cod = int.Parse(codigoMoldura);
-                        _log.CustomWriteOnLog("RealizarVenta", "obj.PK_IM_Cod  = " + objDtoMoldura.PK_IM_Cod.ToString());
-                        int valorRetornadoStoc = objCtrMoldura.StockMoldura(objDtoMoldura);
-                        _log.CustomWriteOnLog("RealizarVenta", "valorRetornadoStoc = " + valorRetornadoStoc);
-
-                        int nuevostock = valorRetornadoStoc - int.Parse(cantidadMoldura);
-                        objDtoMoldura.IM_Stock = nuevostock;
-                        _log.CustomWriteOnLog("RealizarVenta", "nuevostock = " + nuevostock);
-
-                        objDtoMolduraxUsuario.FK_VU_Dni = txtDocumento.Text;
-                        objDtoMolduraxUsuario.FK_IM_Cod = int.Parse(codigoMoldura);
-                        objDtoMolduraxUsuario.IMU_Cantidad = int.Parse(cantidadMoldura);
-                        objDtoMolduraxUsuario.DMU_Precio = double.Parse(subtotalMoldura);
-                        objDtoMolduraxUsuario.FK_IS_Cod = ValorDevuelto;
-                        objCtrMolduraxUsuario.registrarNuevaMoldura2(objDtoMolduraxUsuario);
-                        objCtrMoldura.ActualizarStockxMoldura(objDtoMoldura);
-                        //# de molduraxu
-                        int ValorDevuelto2 = objDtoMolduraxUsuario.PK_IMU_Cod;
-                        pedido = objDtoMolduraxUsuario.PK_IMU_Cod;
-                        objCtrMolduraxUsuario.actualizarMXUSol(objDtoMolduraxUsuario);
-
-
-                        //pagado
-                        double imporpagado = double.Parse(txtmontopagado.Text);
-                        double importotal = Convert.ToDouble(txtimporteigv.Text);
-                        objdtopago.IP_TipoPago = 2;
-                        objdtopago.DP_ImportePagado = Convert.ToDouble(txtmontopagado.Text);
-                        objdtopago.DP_ImporteRestante = importotal - imporpagado;
-                        objdtopago.IP_TipoCertificado = 1;
-                        objdtopago.VP_RUC = ddlListRUC.Text;
-                        objdtopago.FK_IS_Cod = ValorDevuelto; /*solicitud*/
-                        objctrpago.RegistrarPagoB(objdtopago);
-
-
-
-
-                        //Enviar correo con boleta
-
-                        //CTRusuario objctrusr
-                        //dtousuario objuser
-                        //objuser.PK_VU_Dni = txtIdentificadorUsuario.Text;
-                        //objDtoMoldura.PK_IM_Cod = Convert.ToInt32(txtcodigop.Text);
-                        //objctrusr.EnviarBoletaxCorreo(objDtoMoldura,dtoTipoMoldura);
-
-
-
-                        string Select = "SELECT VU_Correo, VU_Contrasenia, VU_Nombre from T_Usuario where PK_VU_Dni ='"
-                        + objDtoMolduraxUsuario.FK_VU_Dni + "'";
-
-                        SqlCommand unComando = new SqlCommand(Select, conexion);
-                        conexion.Open();
-                        SqlDataReader reader = unComando.ExecuteReader();
-
-                        if (reader.Read())
-                        {
-                            string senderr = "decormoldurassac2020@gmail.com";
-                            string senderrPass = "decormoldurassac";
-                            string displayName = "SWCPEDR - DECORMOLDURAS & ROSETONES SAC";
-
-                            var date = DateTime.Now.ToShortDateString();
-                            var recipient = reader["VU_Correo"].ToString();
-                            //var pass = reader["VU_Contrasenia"].ToString();
-                            var nombre = reader["VU_Nombre"].ToString();
-                            var nombreproducto = gvdetalle2.Rows[i].Cells[2].Text;
-                            var sub = gv2.Rows[i].Cells[4].Text; ;
-                            var importetot = objDtoSolicitud.DS_ImporteTotal;
-                            var cantidadproducto = gv2.Rows[i].Cells[2].Text;
-                            var precioUnitario = gv2.Rows[i].Cells[3].Text;
-                            string body =
-                                        "<div class=row>" +
-                                            "<div class=well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3>" +
-                                                "<div class=row>" +
-                                                    "<div class=col-xs-6 col-sm-6 col-md-6>" +
-                                                        "<address>" +
-                                                            "<strong>Decormolduras & Rosetones</strong>" +
-                                                            "<br>" +
-                                                           //2135 Sunset Blvd
-                                                           " <br>" +
-                                                            "Lima Pe, CP 06" +     /*direccion y codigopostal*/
-                                                            "<br>" +
-                                                            "<abbr title = Phone> Telefono :</abbr>" +
-                                                        " (213) 484 - 6829" +    /*telefono*/
-                                                        "</address>" +
-                                                    "</div>" +
-                                                    "<div class=col-xs-6 col-sm-6 col-md-6 text-right>" +
-                                                        "<p>" +
-                                                        "Fecha: " + date +   //"<em>Date: 1st November, 2013</em>"   /*fecha*/
-                                                        "</p>" +
-                                                        "<p>" +
-                                                        //<em>Receipt #: 34522677W</em>    /*numero de pedido*/
-                                                        "</p>" +
-                                                    "</div>" +
-                                               " </div>" +
-                                                "<div class=row>" +
-                                                    "<div class=text-center>" +
-                                                        "<h1>Recibo</h1>" +
-                                                    "</div>" +
-                                                    "</span>" +
-                                                    "<table class=table table-hover>" +
-                                                        "<thead>" +
-                                                            "<tr>" +
-                                                                "<th>Producto</th>" +
-                                                                "<th>#</th>" +
-                                                                "<th class=text-center>Precio</th>" +
-                                                               " <th class=text-center>Total</th>" +
-                                                            "</tr>" +
-                                                        "</thead>" +
-                                                        "<tbody>" +
-                                                            "<tr>" +    /*nombre producto, cantidad producto, precio x unidad, subtotal del producto*/
-                                                                "<td class=col-md-9><em>" + nombreproducto + "</em></h4></td>" +
-                                                                "<td class=col-md-1 style=text-align: center>" + cantidadproducto + "</td>" +
-                                                                "<td class=col-md-1 text-center>" + "S/." + precioUnitario + "</td>" +
-                                                                "<td class=col-md-1 text-center>" + "S/." + sub + "</td>" +
-                                                            "</tr>" +
-                                                            "<tr>" +
-                                                             "<td></td>" +
-                                                                "<td></td>" +
-                                                                "<td class=text-right>" +
-                                                                    "<p>" +
-                                                                        "<strong>Subtotal: </strong>" +
-                                                                    "</p>" +
-                                                                    "<p>" +
-                                                                        "<strong>IGV: </strong>" +
-                                                                    "</p>" +
-                                                                "</td>" +
-                                                                "<td class=text-center>" +
-                                                                    "<p>" +
-                                                                        "<strong>" + "S/." + importetot + "</strong>" + /*subtotal*/
-                                                                    "</p>" +
-                                                                    "<p>" +
-                                                                     "   <strong>18%</strong>" +
-                                                                    "</p>" +
-                                                                "</td>" +
-                                                            "</tr>" +
-                                                            "<tr>" +
-                                                                "<td></td>" +
-                                                                "<td></td>" +
-                                                                "<td class=text-right>" +
-                                                                    "<h4><strong>Total: </strong></h4>" +
-                                                                "</td>" +
-                                                                "<td class=text-center text-danger>" +
-                                                                    "<h4><strong>" + "S/." + importetot + "</strong></h4>" +
-                                                                "</td>" +
-                                                            "</tr>" +
-                                                        "</tbody>" +
-                                                    "</table>" +
-                                                    "</td>" +
-                                                "</div>" +
-                                            "</div>" +
-                                        "</div>" +
-                                    "</div>";
-
-
-                            MailMessage mail = new MailMessage();
-                            mail.Subject = "Confirmacion de compra - SCPEDR";
-                            mail.From = new MailAddress(senderr.Trim(), displayName);
-                            mail.Body = body;
-                            mail.To.Add(recipient.Trim());
-                            mail.IsBodyHtml = true;
-                            //mail.Priority = MailPriority.Normal;
-
-                            SmtpClient smtp = new SmtpClient();
-                            smtp.Host = "smtp.gmail.com";
-                            smtp.Port = 587;
-                            smtp.UseDefaultCredentials = false;
-                            smtp.EnableSsl = true;
-                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                            //smtp.Credentials = new System.Net.NetworkCredential(senderr.Trim(), senderrPass.Trim());
-                            NetworkCredential nc = new NetworkCredential(senderr, senderrPass);
-                            smtp.Credentials = nc;
-
-                            smtp.Send(mail);
-                        }
-
-                        _log.CustomWriteOnLog("RealizarVenta", "Registro moldura : " + codigoMoldura + " para el usuario " + txtDocumento.Text);
-
-                        Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage2()");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                _log.CustomWriteOnLog("RealizarVenta", "btnboleta_Click error  : " + ex.Message);
-            }
         }
 
         protected void btnfactura_Click(object sender, EventArgs e)
@@ -666,11 +393,37 @@ namespace WEB
 
         protected void gv2_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
+            try
+            {
+                double sum = 0;
 
+                _log.CustomWriteOnLog("RealizarVenta", "e.RowIndex btnagregar_Click  : " + e.RowIndex);
+                int index = Convert.ToInt32(e.RowIndex);
+                _log.CustomWriteOnLog("RealizarVenta", "index : " + index);
+                DataTable dt = ViewState["Records"] as DataTable;
+                dt.Rows[index].Delete();
+                ViewState["Records"] = dt;
+                BindGrid();
+
+                _log.CustomWriteOnLog("RealizarVenta", " gv2.Rows.Count : " + gv2.Rows.Count);
+                for (int i = 0; i < gv2.Rows.Count; i++)
+                {
+                    _log.CustomWriteOnLog("RealizarVenta", "gv2.Rows[i].Cells[4].Text  : " + gv2.Rows[i].Cells[4].Text);
+                    sum += double.Parse(gv2.Rows[i].Cells[4].Text);
+                }
+                _log.CustomWriteOnLog("RealizarVenta", "sum  : " + sum);
+                txtimporttot.Text = sum.ToString();
+                txtimporteigv.Text = sum.ToString();
+            }
+            catch (Exception ex)
+            {
+                _log.CustomWriteOnLog("RealizarVenta", "Error btnagregar_Click  : " + ex.Message);
+            }
         }
 
         protected void btnCalcularPersonalizado_Click(object sender, EventArgs e)
         {
+            _log.CustomWriteOnLog("RealizarVenta", "Entro botón Calcular");
             if (txtLargo.Text == "")
             {
                 Utils.AddScriptClientUpdatePanel(panelCalcPersonalizado, "showSuccessMessage8()");
@@ -824,6 +577,420 @@ namespace WEB
             btnRemover.Visible = false;
             txtTitulo2.Visible = false;
             Div.Visible = true;
+        }
+
+        protected void btnboleta_Click1(object sender, EventArgs e)
+        {
+            _log.CustomWriteOnLog("RealizarVenta", "Entro al Boton Pagar");
+            if (txtmontopagado.Text == "")
+            {
+                Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage18()");
+                return;
+            }
+            if (ddl_TipoComprobante.SelectedValue == "0")
+            {
+                Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage12()");
+                return;
+            }
+            if (txtDocumento.Text == "")
+            {
+                Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage7()");
+                return;
+            }
+
+            try
+            {
+                if (ddlPedidoPor.SelectedValue == "1")
+                {
+                    if (valorObtenidoRBTN.Value == "2" && ddlPedidoPor.SelectedValue == "1")
+                    {
+                        _log.CustomWriteOnLog("valorObtenidoRBTNValue", "valorObtenidoRBTN.Value   : " + valorObtenidoRBTN.Value);
+                        _log.CustomWriteOnLog("valorObtenidoRBTNValue", "valorObtenidoRBTN.Value   : " + ddlPedidoPor.SelectedValue);
+
+                        if (Convert.ToInt32(txtCantidadPersonalizado.Text) <= 30)
+                        {
+                            Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage17()");
+                            return;
+                        }
+
+                        objDtoSolicitud.VS_TipoSolicitud = "Personalizado por Catalogo";
+                        objDtoSolicitud.IS_Cantidad = int.Parse(txtCantidadPersonalizado.Text);
+                        objDtoSolicitud.DS_ImporteTotal = int.Parse(txtimporteigv.Text);
+                        objDtoSolicitud.DTS_FechaRecojo = Calendar1.SelectedDate;
+                        objCtrSolicitud.RegistrarSolicitud_PxC(objDtoSolicitud);
+
+                        for (int i = 0; i < gvdetalle.Rows.Count; i++)
+                        {
+                            string subtotalMoldura = gvdetalle2.Rows[i].Cells[6].Text;
+                            _log.CustomWriteOnLog("RealizarVenta", "subtotalMoldura = " + subtotalMoldura);
+
+                            objDtoMolduraxUsuario.FK_VU_Dni = txtDocumento.Text; //dni
+                            objDtoMolduraxUsuario.FK_IM_Cod = int.Parse(txtCodProducto.Text);
+                            objDtoMolduraxUsuario.IMU_Cantidad = int.Parse(txtCantidadProducto.Text);
+                            objDtoMolduraxUsuario.DMU_Precio = double.Parse(subtotalMoldura);
+                            objDtoMolduraxUsuario.FK_IS_Cod = 0;
+                            objCtrMolduraxUsuario.registrarNuevaMoldura2(objDtoMolduraxUsuario);
+                        }
+
+                        int ValorDevuelto = objDtoMolduraxUsuario.PK_IMU_Cod;
+                        _log.CustomWriteOnLog("RealizarVenta", "ValorDevuelto = " + ValorDevuelto);
+
+                        int ValorDevuelto2 = objDtoSolicitud.PK_IS_Cod;
+                        objDtoMolduraxUsuario.FK_IS_Cod = ValorDevuelto2;
+                        objCtrMolduraxUsuario.actualizarMXUSol(objDtoMolduraxUsuario);
+                        Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage3()");
+                    }
+                }
+                else
+                {
+                    int pedido;
+                    int montopagado = int.Parse(txtmontopagado.Text);
+                    int montototal = int.Parse(txtimporttot.Text);
+                    if (montopagado < montototal)
+                    {
+                        Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage14()");
+                        return;
+                    }
+                    for (int y = 0; y < gv2.Rows.Count; y++)
+                    {
+                        string cantidad = gv2.Rows[y].Cells[2].Text;
+                        objDtoSolicitud.DS_ImporteTotal = double.Parse(txtimporteigv.Text);
+                        objDtoSolicitud.IS_Cantidad = int.Parse(cantidad);
+                        objCtrSolicitud.RegistrarSolicitud_LD2(objDtoSolicitud);
+                    }
+                    //# de solicitud
+                    int ValorDevuelto = objDtoSolicitud.PK_IS_Cod;
+                    _log.CustomWriteOnLog("RealizarVenta", "ValorDevuelto = " + ValorDevuelto);
+
+                    for (int i = 0; i < gv2.Rows.Count; i++)
+                    {
+                        string codigoMoldura = gv2.Rows[i].Cells[1].Text;
+                        string subtotalMoldura = gv2.Rows[i].Cells[4].Text;
+                        string cantidadMoldura = gv2.Rows[i].Cells[2].Text;
+                        _log.CustomWriteOnLog("RealizarVenta", " item moldura : " + i + "---------------------------------");
+                        _log.CustomWriteOnLog("RealizarVenta", " txtIdentificadorUsuario.Text = " + txtDocumento.Text);
+                        _log.CustomWriteOnLog("RealizarVenta", "codigoMoldura = " + codigoMoldura);
+                        _log.CustomWriteOnLog("RealizarVenta", "cantidadMoldura = " + cantidadMoldura);
+                        _log.CustomWriteOnLog("RealizarVenta", "subtotalMoldura = " + subtotalMoldura);
+
+                        objDtoMoldura.PK_IM_Cod = int.Parse(codigoMoldura);
+                        _log.CustomWriteOnLog("RealizarVenta", "obj.PK_IM_Cod  = " + objDtoMoldura.PK_IM_Cod.ToString());
+                        int valorRetornadoStoc = objCtrMoldura.StockMoldura(objDtoMoldura);
+                        _log.CustomWriteOnLog("RealizarVenta", "valorRetornadoStoc = " + valorRetornadoStoc);
+
+                        int nuevostock = valorRetornadoStoc - int.Parse(cantidadMoldura);
+                        objDtoMoldura.IM_Stock = nuevostock;
+                        _log.CustomWriteOnLog("RealizarVenta", "nuevostock = " + nuevostock);
+
+                        objDtoMolduraxUsuario.FK_VU_Dni = txtDocumento.Text;
+                        objDtoMolduraxUsuario.FK_IM_Cod = int.Parse(codigoMoldura);
+                        objDtoMolduraxUsuario.IMU_Cantidad = int.Parse(cantidadMoldura);
+                        objDtoMolduraxUsuario.DMU_Precio = double.Parse(subtotalMoldura);
+                        objDtoMolduraxUsuario.FK_IS_Cod = ValorDevuelto;
+                        objCtrMolduraxUsuario.registrarNuevaMoldura2(objDtoMolduraxUsuario);
+                        objCtrMoldura.ActualizarStockxMoldura(objDtoMoldura);
+                        //# de molduraxu
+                        int ValorDevuelto2 = objDtoMolduraxUsuario.PK_IMU_Cod;
+                        pedido = objDtoMolduraxUsuario.PK_IMU_Cod;
+                        objCtrMolduraxUsuario.actualizarMXUSol(objDtoMolduraxUsuario);
+
+
+                        //pagado
+                        double imporpagado = double.Parse(txtmontopagado.Text);
+                        double importotal = Convert.ToDouble(txtimporteigv.Text);
+                        objdtopago.IP_TipoPago = 2;
+                        objdtopago.DP_ImportePagado = Convert.ToDouble(txtmontopagado.Text);
+                        objdtopago.DP_ImporteRestante = importotal - imporpagado;
+                        objdtopago.IP_TipoCertificado = 1;
+                        objdtopago.VP_RUC = ddlListRUC.Text;
+                        objdtopago.FK_IS_Cod = ValorDevuelto; /*solicitud*/
+                        objctrpago.RegistrarPagoB(objdtopago);
+
+                        //Enviar correo con boleta
+
+                        //CTRusuario objctrusr
+                        //dtousuario objuser
+                        //objuser.PK_VU_Dni = txtIdentificadorUsuario.Text;
+                        //objDtoMoldura.PK_IM_Cod = Convert.ToInt32(txtcodigop.Text);
+                        //objctrusr.EnviarBoletaxCorreo(objDtoMoldura,dtoTipoMoldura);
+
+
+
+                        _log.CustomWriteOnLog("RealizarVenta", "Registro moldura : " + codigoMoldura + " para el usuario " + txtDocumento.Text);
+
+                        string Select = "SELECT VU_Correo, VU_Contrasenia, VU_Nombre from T_Usuario where PK_VU_Dni ='"
+                        + objDtoMolduraxUsuario.FK_VU_Dni + "'";
+
+                        SqlCommand unComando = new SqlCommand(Select, conexion);
+                        conexion.Open();
+                        SqlDataReader reader = unComando.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            string senderr = "decormoldurassac2022@hotmail.com";
+                            string senderrPass = "Decormoldurassac1";
+                            string displayName = "SWCPEDR - DECORMOLDURAS & ROSETONES SAC";
+
+                            var date = DateTime.Now.ToShortDateString();
+                            var recipient = reader["VU_Correo"].ToString();
+                            //var pass = reader["VU_Contrasenia"].ToString();
+                            var nombre = reader["VU_Nombre"].ToString();
+                            var nombreproducto = gvdetalle2.Rows[i].Cells[2].Text;
+                            var sub = gv2.Rows[i].Cells[4].Text;
+                            var importetot = objDtoSolicitud.DS_ImporteTotal;
+                            var cantidadproducto = gv2.Rows[i].Cells[2].Text;
+                            var precioUnitario = gv2.Rows[i].Cells[3].Text;
+                            string body =
+                                        "<div class=row>" +
+                                            "<div class=well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3>" +
+                                                "<div class=row>" +
+                                                    "<div class=col-xs-6 col-sm-6 col-md-6>" +
+                                                        "<address>" +
+                                                            "<strong>Decormolduras & Rosetones</strong>" +
+                                                            "<br>" +
+                                                           //2135 Sunset Blvd
+                                                           " <br>" +
+                                                            "Lima Pe, CP 06" +     /*direccion y codigopostal*/
+                                                            "<br>" +
+                                                            "<abbr title = Phone> Telefono :</abbr>" +
+                                                        " (213) 484 - 6829" +    /*telefono*/
+                                                        "</address>" +
+                                                    "</div>" +
+                                                    "<div class=col-xs-6 col-sm-6 col-md-6 text-right>" +
+                                                        "<p>" +
+                                                        "Fecha: " + date +   //"<em>Date: 1st November, 2013</em>"   /*fecha*/
+                                                        "</p>" +
+                                                        "<p>" +
+                                                        //<em>Receipt #: 34522677W</em>    /*numero de pedido*/
+                                                        "</p>" +
+                                                    "</div>" +
+                                               " </div>" +
+                                                "<div class=row>" +
+                                                    "<div class=text-center>" +
+                                                        "<h1>Recibo</h1>" +
+                                                    "</div>" +
+                                                    "</span>" +
+                                                    "<table class=table table-hover>" +
+                                                        "<thead>" +
+                                                            "<tr>" +
+                                                                "<th>Producto</th>" +
+                                                                "<th>#</th>" +
+                                                                "<th class=text-center>Precio</th>" +
+                                                               " <th class=text-center>Total</th>" +
+                                                            "</tr>" +
+                                                        "</thead>" +
+                                                        "<tbody>" +
+                                                            "<tr>" +    /*nombre producto, cantidad producto, precio x unidad, subtotal del producto*/
+                                                                "<td class=col-md-9><em>" + nombreproducto + "</em></h4></td>" +
+                                                                "<td class=col-md-1 style=text-align: center>" + cantidadproducto + "</td>" +
+                                                                "<td class=col-md-1 text-center>" + "S/." + precioUnitario + "</td>" +
+                                                                "<td class=col-md-1 text-center>" + "S/." + sub + "</td>" +
+                                                            "</tr>" +
+                                                            "<tr>" +
+                                                             "<td></td>" +
+                                                                "<td></td>" +
+                                                                "<td class=text-right>" +
+                                                                    "<p>" +
+                                                                        "<strong>Subtotal: </strong>" +
+                                                                    "</p>" +
+                                                                    "<p>" +
+                                                                        "<strong>IGV: </strong>" +
+                                                                    "</p>" +
+                                                                "</td>" +
+                                                                "<td class=text-center>" +
+                                                                    "<p>" +
+                                                                        "<strong>" + "S/." + importetot + "</strong>" + /*subtotal*/
+                                                                    "</p>" +
+                                                                    "<p>" +
+                                                                     "   <strong>18%</strong>" +
+                                                                    "</p>" +
+                                                                "</td>" +
+                                                            "</tr>" +
+                                                            "<tr>" +
+                                                                "<td></td>" +
+                                                                "<td></td>" +
+                                                                "<td class=text-right>" +
+                                                                    "<h4><strong>Total: </strong></h4>" +
+                                                                "</td>" +
+                                                                "<td class=text-center text-danger>" +
+                                                                    "<h4><strong>" + "S/." + importetot + "</strong></h4>" +
+                                                                "</td>" +
+                                                            "</tr>" +
+                                                        "</tbody>" +
+                                                    "</table>" +
+                                                    "</td>" +
+                                                "</div>" +
+                                            "</div>" +
+                                        "</div>" +
+                                    "</div>";
+
+                            MailMessage mail = new MailMessage();
+                            mail.Subject = "Confirmacion de compra - SCPEDR";
+                            mail.From = new MailAddress(senderr.Trim(), displayName);
+                            mail.Body = body;
+                            mail.To.Add(recipient.Trim());
+                            mail.IsBodyHtml = true;
+                            //mail.Priority = MailPriority.Normal;
+
+                            SmtpClient smtp = new SmtpClient();
+                            smtp.Host = "smtp.office365.com";
+                            smtp.Port = 587;
+                            smtp.UseDefaultCredentials = false;
+                            smtp.EnableSsl = true;
+                            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                            //smtp.Credentials = new System.Net.NetworkCredential(senderr.Trim(), senderrPass.Trim());
+                            NetworkCredential nc = new NetworkCredential(senderr, senderrPass);
+                            smtp.Credentials = nc;
+
+                            smtp.Send(mail);
+                        }
+                        conexion.Close();
+                        
+                    }
+                    //Enviar_Correo(objDtoMolduraxUsuario.FK_VU_Dni);
+                    Utils.AddScriptClientUpdatePanel(updBotonEnviar, "showSuccessMessage2()");
+                    //Enviar_Correo();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                _log.CustomWriteOnLog("RealizarVenta", "btnboleta_Click error  : " + ex.Message);
+            }
+        }
+        public void Enviar_Correo()
+        {
+
+            using (System.IO.MemoryStream memoryStream = new System.IO.MemoryStream())
+            {
+                Document document = new Document(PageSize.A4, 30, 55, 70, 10);
+                PdfWriter writer = PdfWriter.GetInstance(document, memoryStream);
+                document.Open();
+
+                //Chunk chunk = new Chunk("Comprobante generado ");
+                //document.Add(chunk);
+
+                //titulo
+                BaseFont bfntHead = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                Font fntHead = new Font(bfntHead, 20, 1, BaseColor.BLACK);
+                Paragraph prgHead = new Paragraph();
+                prgHead.SpacingBefore = 30;
+                prgHead.SpacingAfter = 5;
+                prgHead.Alignment = Element.ALIGN_CENTER;
+                prgHead.Add(new Chunk("COMPROBANTE GENERADO", fntHead));
+                document.Add(prgHead);
+
+                //Paragraph para = new Paragraph(txtNombres.Text + " " + txtapellido.Text);
+                ////document.Add(para);
+
+                //RUC
+                Font fntRUC = new Font(bfntHead, 12, 1, BaseColor.BLACK);
+                Paragraph prgRUC = new Paragraph();
+                prgRUC.SpacingBefore = 30;
+                prgRUC.SpacingAfter = 5;
+                prgRUC.Alignment = Element.ALIGN_RIGHT;
+                prgRUC.Add(new Chunk("R.U.C. 10007456085", fntHead));
+                document.Add(prgRUC);
+
+                //Num comprobante
+                Font fntNum = new Font(bfntHead, 8, 2, BaseColor.BLACK);
+                Paragraph prgNum = new Paragraph();
+                prgNum.SpacingBefore = 10;
+                prgNum.SpacingAfter = 5;
+                prgNum.Alignment = Element.ALIGN_RIGHT;
+                prgNum.Add(new Chunk("N° comprobante: 000 - 000020", fntHead));
+                document.Add(prgNum);
+
+                //nombre del cliente
+                Font fntname = new Font(bfntHead, 16, 1, BaseColor.BLACK);
+                Paragraph prgname = new Paragraph();
+                prgname.SpacingBefore = 30;
+                prgname.SpacingAfter = 5;
+                prgname.Add(new Chunk("Sr(a): " + txtNombre.Text + " " + txtApellido.Text, fntHead));
+                document.Add(prgname);
+
+                //Cp, telefono,fecha y hora
+                string text = "Lima Pe, CP 06";
+                string text1 = Environment.NewLine + "Telefono : (213) 484 - 6829";
+                string time = Environment.NewLine + "Fecha de emision: " + Convert.ToString(DateTime.Now.ToShortDateString());
+                string direc = Environment.NewLine + "San Juan de Miraflores --- 1025  ";
+                Paragraph paragraph = new Paragraph();
+                paragraph.SpacingBefore = 5;
+                paragraph.SpacingAfter = 5;
+                paragraph.Alignment = Element.ALIGN_LEFT;
+                paragraph.Font = FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12f, BaseColor.BLACK);
+                paragraph.Add(text);
+                paragraph.Add(text1);
+                paragraph.Add(time);
+                document.Add(paragraph);
+
+                //line separadora
+                Paragraph line = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+                document.Add(line);
+
+                //line
+                document.Add(new Chunk("\n", fntHead));
+
+                //contenido
+                BaseFont bfnCont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                Font fntCont = new Font(bfntHead, 14, 1, BaseColor.BLACK);
+                Paragraph prgCont = new Paragraph();
+                prgCont.SpacingBefore = 10;
+                prgCont.SpacingAfter = 15;
+                prgCont.Alignment = Element.ALIGN_CENTER;
+                prgCont.Add(new Chunk("Contenido", fntHead));
+                document.Add(prgCont);
+
+
+                //sesion table gv2
+                dt = (DataTable)ViewState["Records"];
+                //write table
+                PdfPTable table = new PdfPTable(dt.Columns.Count);
+
+                //table header
+                BaseFont BsColumnHeader = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+                Font fntColumnHeader = new Font(BsColumnHeader, 10, 1, BaseColor.BLACK);
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    PdfPCell cell = new PdfPCell();
+                    cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                    cell.AddElement(new Chunk(dt.Columns[i].ColumnName.ToUpper(), fntColumnHeader));
+                    table.AddCell(cell);
+                }
+                //table Data
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dt.Columns.Count; j++)
+                    {
+                        table.AddCell(dt.Rows[i][j].ToString());
+                    }
+                }
+                document.Add(table);
+
+                //import total
+                //Font fntImp = new Font(bfntHead, 4, 1, BaseColor.BLACK);
+                Paragraph prgImp = new Paragraph();
+                prgImp.SpacingBefore = 5;
+                prgImp.SpacingAfter = 5;
+                prgImp.IndentationLeft = 245;
+                //prgImp.Alignment = Element.ALIGN_RIGHT;
+                prgImp.Add(new Chunk("Importe total: S/." + txtimporttot.Text, fntHead));
+                document.Add(prgImp);
+                document.Close();
+                byte[] bytes = memoryStream.ToArray();
+                memoryStream.Close();
+                Response.Clear();
+                Response.ContentType = "application/pdf";
+                //string pdfName = "User";
+                Response.AddHeader("Content-Disposition", "attachment; filename=Boleta" + txtDocumento.Text + ".pdf");
+                Response.ContentType = "application/pdf";
+                Response.Buffer = true;
+                Response.Cache.SetCacheability(HttpCacheability.NoCache);
+                Response.BinaryWrite(bytes);
+                Response.End();
+                Response.Close();
+                writer.Close();
+            }
         }
     }
 }

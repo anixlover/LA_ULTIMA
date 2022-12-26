@@ -871,12 +871,13 @@ namespace WEB
 
         /// <summary>
         /// btnboleta1 control.
+        /// Control divbtnboleta1.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btnboleta1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divbtnboleta1;
 
         /// <summary>
         /// btnboleta control.
