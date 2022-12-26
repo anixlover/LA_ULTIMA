@@ -603,7 +603,7 @@
                         </asp:UpdatePanel>
                         <br />
                         <asp:Label ID="lblmontopagado" Text="Monto Pagado:" runat="server"></asp:Label>
-                        <div class="input-group">
+                        <div class="form-inline">
                             <asp:TextBox runat="server" type="number" ID="txtmontopagado" class="form-control autonumber" onkeyup="CalcularVuelto()" ClientIDMode="Static"></asp:TextBox>
                         </div>
                         <br />

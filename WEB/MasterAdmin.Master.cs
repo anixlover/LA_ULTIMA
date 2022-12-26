@@ -76,7 +76,12 @@ namespace WEB
         public void perfilGerente()
         {
             string html = string.Format(@"
-
+                            <li>
+                                <a href='Dashboard.aspx' class='collapse'>
+                                    <i data-feather='book-open'></i>
+                                    <span>Analisis de Venta</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href='Gestionar_Catalogo.aspx' class='collapse'>
                                     <i data-feather='book-open'></i>
