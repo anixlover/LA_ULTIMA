@@ -11,7 +11,7 @@ namespace WEB
 {
 
 
-    public partial class Autentificación
+    public partial class Autentificacion
     {
 
         /// <summary>

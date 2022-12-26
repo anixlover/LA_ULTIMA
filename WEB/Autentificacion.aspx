@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Autentificación.aspx.cs" Inherits="WEB.Autentificación" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Autentificacion.aspx.cs" Inherits="WEB.Autentificacion" %>
 
 <!DOCTYPE html>
 
@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+
     <style>
         body {
             background-image: url('assets/images/small/Portada2.png');
@@ -29,11 +30,29 @@
     <!-- Tour css -->
     <link href="../assets/libs/hopscotch/css/hopscotch.min.css" rel="stylesheet" type="text/css" />
 
+
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+
         </div>
     </form>
 </body>
+    
+<!-- Plugins js-->
+<script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+<script src="../assets/libs/apexcharts/apexcharts.min.js"></script>
+<script src="../assets/libs/selectize/js/standalone/selectize.min.js"></script>
+<script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
+<script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+<script src="../assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+<!-- Vendor js -->
+<script src="../assets/js/vendor.min.js"></script>
+<!-- App js -->
+<script src="../assets/js/app.min.js"></script>
+<!-- Tour page js -->
+<script src="../assets/libs/hopscotch/js/hopscotch.min.js"></script>
+
+
 </html>

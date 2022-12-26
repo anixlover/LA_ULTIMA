@@ -1980,6 +1980,7 @@
     <Content Include="assets\libs\x-editable\jqueryui-editable\img\loading.gif" />
     <Content Include="assets\libs\x-editable\jqueryui-editable\js\jqueryui-editable.min.js" />
     <Content Include="assets\Plugins\jquery.min.js" />
+    <Content Include="Autentificacion.aspx" />
     <Content Include="CambiarContraseña.aspx" />
     <Content Include="Dashboard.aspx" />
     <Content Include="Detalles_Solicitud2.aspx" />
@@ -2027,6 +2028,13 @@
     </Compile>
     <Compile Include="Administrar_Solicitud_Pedido.aspx.designer.cs">
       <DependentUpon>Administrar_Solicitud_Pedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Autentificacion.aspx.cs">
+      <DependentUpon>Autentificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Autentificacion.aspx.designer.cs">
+      <DependentUpon>Autentificacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="CambiarContraseña.aspx.cs">
       <DependentUpon>CambiarContraseña.aspx</DependentUpon>

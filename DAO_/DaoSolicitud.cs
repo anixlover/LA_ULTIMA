@@ -86,7 +86,7 @@ namespace DAO
         {
             DataTable dtsolicitudes = null;
             conexion.Open();
-            SqlCommand command = new SqlCommand("select * from Vista_Solicitudes_Trabajador", conexion);
+            SqlCommand command = new SqlCommand("select * from Vista_Solicitudes_Trabajador order by PK_IS_Cod desc", conexion);
             SqlDataAdapter daAdaptador = new SqlDataAdapter(command);
             dtsolicitudes = new DataTable();
             daAdaptador.Fill(dtsolicitudes);
