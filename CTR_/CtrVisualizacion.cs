@@ -70,6 +70,45 @@ namespace CTR
             }
         }
 
+        public List<DTOVentaDashboard> ObtenerVentasPorMes()
+        {
+            try
+            {
+                return daoVisualizacion.ObtenerVentasPorMes();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<DTOVentaAnualDashboard> ObtenerVentasAnuales()
+        {
+            try
+            {
+                return daoVisualizacion.ObtenerVentasAnuales();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public DTOIngresosTotalDashboard ObtenerIngresosTotales()
+        {
+            try
+            {
+                return daoVisualizacion.ObtenerIngresosTotales();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public DTOIngresoDashboard ObtenerIngresos()
         {
             try
