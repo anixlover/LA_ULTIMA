@@ -17,7 +17,6 @@ namespace WEB
         SqlConnection conexion;
         DtoUsuario objUsuario = new DtoUsuario();
         CtrUsuario objCtrUsuario = new CtrUsuario();
-        //NO TOCAR EXPLOTA
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

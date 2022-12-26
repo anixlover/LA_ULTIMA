@@ -112,8 +112,8 @@
                                         <asp:UpdatePanel runat="server" UpdateMode="Conditional" ID="updPanelddl" ClientIDMode="Static">
                                             <ContentTemplate>
                                                 <asp:DropDownList runat="server" class="btn btn-primary   dropdown-toggle" aria-haspopup="true" aria-expanded="false" ID="ddl_TipoComprobante" ClientIDMode="Static" OnSelectedIndexChanged="ddl_TipoComprobante_SelectedIndexChanged">
-                                                    <asp:ListItem Text="Seleccionar" Selected="True" />
-                                                    <asp:ListItem Value="1" Text="Boleta" />
+                                                    <asp:ListItem Text="Seleccionar"/>
+                                                    <asp:ListItem Value="1" Text="Boleta" Selected="True"/>
                                                     <asp:ListItem Value="2" Text="Factura" />
                                                 </asp:DropDownList>
                                             </ContentTemplate>

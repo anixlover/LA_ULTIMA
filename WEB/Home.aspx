@@ -10,6 +10,25 @@
     <link href="../assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
     <!-- Tour css -->
     <link href="../assets/libs/hopscotch/css/hopscotch.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .div-card{
+            display: flex;
+            flex-direction: column;
+            min-height: 506px
+        }
+        .card-image {
+            width: 100%;
+            height: 60%;
+        }
+        .card-text {
+            width: 100%;
+            height: 40%
+        }
+        .card-image img{
+          height: calc(100% - XXpx); 
+          object-fit: contain;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
@@ -28,10 +47,10 @@
                         <img class="d-block img-fluid" src="../assets/images/small/Portada1.png" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="../assets/images/small/Portada2.png" alt="Second slide">
+                        <img class="d-block img-fluid" src="../assets/images/ANA2.png" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="../assets/images/small/Portada2.png" alt="Third slide">
+                        <img class="d-block img-fluid" src="../assets/images/ANA4.png" alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -58,7 +77,27 @@
         <div class="col-sm-12">
             <div class="card-box">
                 <div class="row">
-                    <h4 class="header-title"> Somos una empresa...</h4>
+                    <h4 class="header-title" style="margin-left: 12px;"> Somos una empresa...</h4>
+                </div>
+                <div class="row">
+                    <div class="col-4 div-card">
+                       <div class="card-image" style="display: flex; justify-content: center; background-image: url('../assets/images/3.jpeg'); background-size:cover"></div>
+                       <div class="card-text" style="text-align: justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                       </div>
+                    </div>
+                    <div class="col-4 div-card">
+                       <div class="card-image" style="background-image: url('../assets/images/2.jpeg'); background-size:cover"></div>
+                       <div class="card-text" style="text-align: justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                       </div>
+                    </div>
+                    <div class="col-4 div-card">
+                       <div class="card-image" style="background-image: url('../assets/images/1.jpeg'); background-size:cover"></div>
+                       <div class="card-text" style="text-align: justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                       </div>
+                    </div>
                 </div>
             </div>
         </div>  

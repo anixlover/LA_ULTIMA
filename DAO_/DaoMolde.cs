@@ -52,7 +52,7 @@ namespace DAO
         {
             DataTable dtmoldes = null;
             conexion.Open();
-            SqlCommand command = new SqlCommand("select PK_IML_Cod,CASE WHEN VML_Disponibilidad=1 THEN 'Disponible' WHEN VML_Disponibilidad=0 THEN 'No disponible' END AS VML_Disponibilidad,IML_Cantidad,FK_IM_Cod from T_MOLDE", conexion);
+            SqlCommand command = new SqlCommand("select PK_IML_Cod,CASE WHEN VML_Disponibilidad=1 THEN 'Disponible' WHEN VML_Disponibilidad=0 THEN 'No disponible' END AS VML_Disponibilidad,IML_Cantidad,FK_IM_Cod from T_MOLDE order by PK_IML_Cod desc", conexion);
             SqlDataAdapter daAdaptador = new SqlDataAdapter(command);
             dtmoldes = new DataTable();
             daAdaptador.Fill(dtmoldes);
