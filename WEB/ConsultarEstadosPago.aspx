@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="page-title-box">
-                    <h4 class="page-title">REALIZAR COMPRA</h4>
+                    <h4 class="page-title">MIS PEDIDOS</h4>
              </div>
             <div class="card-box">
                    <asp:UpdatePanel ID="UpdatePanel" runat="server" UpdateMode="Conditional">
