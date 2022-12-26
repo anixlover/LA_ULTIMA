@@ -31,7 +31,12 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group text-right m-b-0">
-                                            <asp:Button ID="btnAgregarMoldura" class="btn btn-danger" runat="server" Text="➕ Agregar" OnClick="btnAgregarMoldura_Click" />
+                                            <asp:LinkButton
+                                                style="background-color: #323a46;border-color: #323a46; color: white"
+                                                class="btn"
+                                                runat="server" 
+                                                Text='<div>Agregar producto <i class="mdi mdi-plus-circle" style="font-size:18px"></i></div>'
+                                                OnClick="btnAgregarMoldura_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -60,14 +65,30 @@
                                         <asp:BoundField DataField="Estado" HeaderText="Estado" />
                                         <asp:TemplateField>
                                             <ItemTemplate>
-                                                <asp:Button ID="btnGetMoldura" Text="Consultar" class="btn btn-sm btn-warning"
-                                                    CommandArgument="<%# Container.DataItemIndex %>" CommandName="getMoldura"
-                                                    runat="server" data-toggle="modal" data-target="#modalDetalle" />
+                                                <asp:LinkButton
+                                                    runat="server"
+                                                    ID="btnGetMoldura"
+                                                    ToolTip="Consultar"
+                                                    Text='<i class="mdi mdi-eye"></i>'
+                                                    CommandName="getMoldura"
+                                                    CommandArgument='<%# Container.DataItemIndex %>'
+                                                    OnClientClick="openModal()"
+                                                    CssClass="btn btn-success" />
                                             </ItemTemplate>
                                         </asp:TemplateField>
-                                        <asp:ButtonField ButtonType="Button" AccessibleHeaderText="btnActualizar" Text="Modificar" CommandName="Actualizar">
-                                            <ControlStyle CssClass="btn btn-sm btn-blue" />
-                                        </asp:ButtonField>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                               <asp:LinkButton
+                                                   runat="server"
+                                                   ButtonType="Button"
+                                                   AccessibleHeaderText="btnActualizar"
+                                                   Text='<i class="mdi mdi-pencil"></i>'
+                                                   CommandName="Actualizar"
+                                                   CommandArgument='<%# Container.DataItemIndex %>'
+                                                   CssClass="btn btn-warning" />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                      
                                     </Columns>
                                 </asp:GridView>
                             </div>
@@ -135,6 +156,12 @@
 
         <!-- Bootstrap Tables js -->
         <script src="../assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
+
+        <script type="text/javascript">
+            function openModal() {
+                $('#modalDetalle').modal('show');
+            }
+        </script>
 
         <!-- Init js -->
         <script src="../assets/js/pages/bootstrap-tables.init.js"></script>

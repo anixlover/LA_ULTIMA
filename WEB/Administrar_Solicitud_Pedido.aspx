@@ -73,12 +73,28 @@
                                             </div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:ButtonField ButtonType="button" HeaderText="Detalles" CommandName="Ver" Text="Ver">
-                                        <ControlStyle CssClass="btn btn-warning" />
-                                    </asp:ButtonField>
-                                    <asp:ButtonField ButtonType="button" HeaderText="Eliminar" CommandName="Eliminar" Text="Eliminar">
-                                        <ControlStyle CssClass="btn btn-warning" />
-                                    </asp:ButtonField>
+                                    <asp:TemplateField HeaderText="Detalles" ItemStyle-Width="150">
+                                        <ItemTemplate>
+                                             <asp:LinkButton
+                                                    runat="server"
+                                                    ToolTip="Ver"
+                                                    Text='<i class="mdi mdi-eye"></i>'
+                                                    CommandName="Ver"
+                                                    CommandArgument='<%# Container.DataItemIndex %>'
+                                                    CssClass="btn btn-success" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Eliminar" ItemStyle-Width="150">
+                                        <ItemTemplate>
+                                             <asp:LinkButton
+                                                    runat="server"
+                                                    ToolTip="Eliminar"
+                                                    Text='<i class="mdi mdi-delete"></i>'
+                                                    CommandName="Eliminar"
+                                                    CommandArgument='<%# Container.DataItemIndex %>'
+                                                    CssClass="btn btn-danger" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                         </div>
@@ -86,7 +102,7 @@
                 </asp:UpdatePanel>
 
                 <asp:LinkButton ID="btncrear" runat="server" type="button" class="btn btn-success waves-effect waves-light"  onclick="btnPagar_Click1">
-                                                    <span class="btn-label"></span>Crear solicitud
+                                                    <i class="mdi mdi-note-multiple-outline"></i>  Crear solicitud
                 </asp:LinkButton>
 
                
@@ -112,16 +128,14 @@
                             <h4 class="modal-title" id="tituloModal" runat="server">Detalles y actualización</h4>
                         </div>
                         <div class="modal-body">
-
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div>
-                                        <asp:Image ID="Image1" Height="300px" Width="300px" runat="server" class="rounded" />
-                                    </div>
+                                <div class="col-md-12" style="text-align: center">
+                                    <asp:Image ID="Image1" Height="250px" runat="server" class="rounded" />
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                        <div class="row clearfix" style="justify-content: center;">
                                             <div class="form-group form-float">
                                                 <label class="form-label">Codigo Solicitud:</label>
                                                 <div class="form-line focused">
@@ -133,91 +147,94 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="form-group form-float">
-                                                <label class="form-label">Descripción :</label>
-                                                <div class="form-line focused">
-                                                    <div class="form-line">
-                                                        <asp:TextBox ID="txtDescripcionModal" class="form-control" runat="server" ReadOnly></asp:TextBox>
-                                                        <input id="txtprecior" class="form-control" runat="server" clientidmode="Static" type="hidden" />
-                                                    </div>
+                                <div class="col-md-4">
+                                    <div class="row clearfix" style="justify-content: center;">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Descripción :</label>
+                                            <div class="form-line focused">
+                                                <div class="form-line">
+                                                    <asp:TextBox ID="txtDescripcionModal" class="form-control" runat="server" ReadOnly></asp:TextBox>
+                                                    <input id="txtprecior" class="form-control" runat="server" clientidmode="Static" type="hidden" />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="form-group form-float">
-                                                <label class="form-label">Tipo Moldura :</label>
-                                                <div class="form-line focused">
-                                                    <div class="form-line">
-                                                        <asp:TextBox ID="txtTMModal" class="form-control" runat="server" ReadOnly></asp:TextBox>
-                                                    </div>
+                                </div>    
+                                <div class="col-md-4">
+                                    <div class="row clearfix" style="justify-content: center;">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Tipo Moldura :</label>
+                                            <div class="form-line focused">
+                                                <div class="form-line">
+                                                    <asp:TextBox ID="txtTMModal" class="form-control" runat="server" ReadOnly></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="form-group form-float">
-                                                <label class="form-label">Largo :</label>
-                                                <div class="form-line focused">
-                                                    <div class="form-line">
-                                                        <asp:TextBox ID="txtlargo" class="form-control" runat="server" ReadOnly></asp:TextBox>
-                                                    </div>
+                                </div>                       
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row clearfix" style="justify-content: center;">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Largo :</label>
+                                            <div class="form-line focused">
+                                                <div class="form-line">
+                                                    <asp:TextBox ID="txtlargo" class="form-control" runat="server" ReadOnly></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="form-group form-float">
-                                                <label class="form-label">Ancho :</label>
-                                                <div class="form-line focused">
-                                                    <div class="form-line">
-                                                        <asp:TextBox ID="txtancho" class="form-control" runat="server" ReadOnly></asp:TextBox>
-                                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row clearfix" style="justify-content: center;">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Ancho :</label>
+                                            <div class="form-line focused">
+                                                <div class="form-line">
+                                                    <asp:TextBox ID="txtancho" class="form-control" runat="server" ReadOnly></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="form-group form-float">
-                                                <label class="form-label">unidad metrica :</label>
-                                                <div class="form-line focused">
-                                                    <div class="form-line">
-                                                        <asp:TextBox ID="txtUMModal" class="form-control" runat="server" ReadOnly></asp:TextBox>
-                                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row clearfix" style="justify-content: center;">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">unidad metrica :</label>
+                                            <div class="form-line focused">
+                                                <div class="form-line">
+                                                    <asp:TextBox ID="txtUMModal" class="form-control" runat="server" ReadOnly></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="form-group form-float">
-                                                <label class="form-label">Cantidad :</label>
-                                                <div class="form-line focused">
-                                                    <div class="form-line">
-                                                        <asp:TextBox ID="txtcantidadModal" class="form-control" max="500" min="1" runat="server" onkeyup="checkCantidad()" ClientIDMode="Static" type="number"></asp:TextBox>
-                                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="row clearfix" style="justify-content: center;">
+                                        <div class="form-group form-float" style="width: 194px">
+                                            <label class="form-label">Cantidad :</label>
+                                            <div class="form-line focused">
+                                                <div class="form-line">
+                                                    <asp:TextBox ID="txtcantidadModal" class="form-control" max="500" min="1" runat="server" onkeyup="checkCantidad()" ClientIDMode="Static" type="number"></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="form-group form-float">
-                                                <label class="form-label">Precio Unitario:</label>
-                                                <div class="form-line focused">
-                                                    <div class="form-line">
-                                                        <asp:UpdatePanel runat="server">
-                                                            <ContentTemplate>
-                                                                <input type="text" id="txtPrecioModal" class="form-control" runat="server" readonly clientidmode="Static" />
-                                                            </ContentTemplate>
-                                                        </asp:UpdatePanel>
-                                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row clearfix" style="justify-content: center;">
+                                        <div class="form-group form-float">
+                                            <label class="form-label">Precio Unitario:</label>
+                                            <div class="form-line focused">
+                                                <div class="form-line">
+                                                    <asp:UpdatePanel runat="server">
+                                                        <ContentTemplate>
+                                                            <input type="text" id="txtPrecioModal" class="form-control" runat="server" readonly clientidmode="Static" />
+                                                        </ContentTemplate>
+                                                    </asp:UpdatePanel>
                                                 </div>
                                             </div>
                                         </div>

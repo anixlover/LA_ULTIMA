@@ -51,15 +51,6 @@ namespace WEB
         protected global::System.Web.UI.WebControls.DropDownList ddlTipoMoldura;
 
         /// <summary>
-        /// btnAgregarMoldura control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarMoldura;
-
-        /// <summary>
         /// gvCatalogo control.
         /// </summary>
         /// <remarks>
