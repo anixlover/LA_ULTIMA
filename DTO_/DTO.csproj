@@ -60,8 +60,11 @@
     <Compile Include="Dto_Voucher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Visualizacion\DTOIngresoDashboard.cs" />
+    <Compile Include="Visualizacion\DTOIngresosTotalDashboard.cs" />
     <Compile Include="Visualizacion\DTOProductoVendido.cs" />
+    <Compile Include="Visualizacion\DTOVentaAnualDashboard.cs" />
     <Compile Include="Visualizacion\DTOVentaCatalogoDashboard.cs" />
+    <Compile Include="Visualizacion\DTOVentaDashboard.cs" />
     <Compile Include="Visualizacion\DTOVentaPersonalizadaDashboard.cs" />
     <Compile Include="Visualizacion\DTOVisualizacionDashboard.cs" />
   </ItemGroup>

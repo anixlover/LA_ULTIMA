@@ -20,7 +20,7 @@
         <div class="card-box" id="ventas-catalogo">
             <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" 
                 title="Ventas del mes"></i>
-            <h4 class="mt-0 font-16">Estado de ventas</h4>
+            <h4 class="mt-0 font-16">Estado de ventas por catálogo</h4>
             <h2 class="text-primary my-3 text-center">567</h2>
             <p class="text-muted mb-0">Ventas Totales: <span id="total-ventas-catalogo">345</span></p>
         </div>
@@ -29,7 +29,7 @@
         <div class="card-box" id="ventas-personalizada">
             <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" 
                 title="Ventas del mes"></i>
-            <h4 class="mt-0 font-16">Estado de ventas</h4>
+            <h4 class="mt-0 font-16">Estado de ventas personalizada</h4>
             <h2 class="text-primary my-3 text-center">567</h2>
             <p class="text-muted mb-0">Ventas Totales: <span id="total-ventas-personalizada">345</span></p>
         </div>
@@ -44,10 +44,62 @@
         </div>
     </div>
     <div class="col-sm-12 col-md-6 col-xl-4">
+        <div class="card-box">
+             <h4 class="header-title mb-0">Ingresos Totales</h4>
+            <div class="widget-chart text-center" dir="ltr">
+                                        
+                <div id="total-revenue" class="mt-0"  data-colors="#f1556c"></div>
 
+                <h5 class="text-muted mt-0">Ventas totales realizadas hoy</h5>
+                <h2 id="total-revenue-day">S/. 0.00</h2>
+
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <p class="text-muted font-15 mb-1 text-truncate">La semana </p>
+                        <h4 id="total-revenue-week">S/. 0.00</h4>
+                    </div>
+                    <div class="col-6">
+                        <p class="text-muted font-15 mb-1 text-truncate">Mes pasado</p>
+                        <h4 id="total-revenue-month">S/. 0.00</h4>
+                    </div>
+                </div>                      
+            </div>
+        </div>
+         
     </div>
     <div class="col-sm-12 col-md-6 col-xl-8">
+        <div class="card-box pb-2">
+           <%-- <div class="float-right d-none d-md-inline-block">
+                <div class="btn-group mb-2">
+                    <button type="button" class="btn btn-xs btn-light">Hoy día</button>
+                    <button type="button" class="btn btn-xs btn-light">Semanalmente</button>
+                    <button type="button" class="btn btn-xs btn-secondary">Mensual</button>
+                </div>
+            </div>--%>
 
+            <h4 class="header-title mb-3">Análisis de Ventas</h4>
+
+            <div dir="ltr">
+                <div id="sales-analytics" class="mt-4" data-colors="#1abc9c,#4a81d4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-xl-12">
+        <div class="card-box pb-2">
+            <div class="float-right d-none d-md-inline-block">
+                <%--<div class="btn-group mb-2">
+                    <button type="button" class="btn btn-xs btn-light">Hoy día</button>
+                    <button type="button" class="btn btn-xs btn-light">Semanalmente</button>
+                    <button type="button" class="btn btn-xs btn-secondary">Mensual</button>
+                </div>--%>
+            </div>
+
+            <h4 class="header-title mb-3">Año Actual vs Año Anterior</h4>
+
+            <div dir="ltr">
+                <div id="annually-sales-analytics" class="mt-4" data-colors="#4a81d4,#e3eaef"></div>
+            </div>
+        </div>
     </div>
     <div class="col-sm-12 col-md-6 col-xl-8">
         <div class="card">

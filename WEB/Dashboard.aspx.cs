@@ -65,6 +65,40 @@ namespace WEB
 
         [WebMethod]
         [ScriptMethod(UseHttpGet = true)]
+        public static List<DTOVentaAnualDashboard> ObtenerVentasAnuales()
+        {
+            var ctrVisualizacion = new CtrVisualizacion();
+
+            var ventas = ctrVisualizacion.ObtenerVentasAnuales();
+
+            return ventas;
+        }
+
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static List<DTOVentaDashboard> ObtenerVentasPorMes()
+        {
+            var ctrVisualizacion = new CtrVisualizacion();
+
+            var ventas = ctrVisualizacion.ObtenerVentasPorMes();
+
+            return ventas;
+        }
+
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static DTOIngresosTotalDashboard ObtenerIngresosTotales()
+        {
+            var ctrVisualizacion = new CtrVisualizacion();
+
+            var ingresosTotales = ctrVisualizacion.ObtenerIngresosTotales();
+
+            return ingresosTotales;
+        }
+
+
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
         public static List<DTOProductoVendido> ObtenerProductosVendidos()
         {
             var ctrVisualizacion = new CtrVisualizacion();

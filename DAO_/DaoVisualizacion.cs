@@ -76,6 +76,104 @@ namespace DAO_
             return productosVendidos;
         }
 
+        public List<DTOVentaAnualDashboard> ObtenerVentasAnuales()
+        {
+            var ventas = new List<DTOVentaAnualDashboard>();
+
+            SqlCommand command = new SqlCommand("SP_ObtenerVentasAnuales", conexion)
+            {
+                CommandType = CommandType.StoredProcedure,
+                CommandTimeout = 600
+            };
+
+            conexion.Open();
+
+            var dataReader = command.ExecuteReader();
+
+            using (dataReader)
+            {
+                while (dataReader.Read())
+                {
+                    var venta = new DTOVentaAnualDashboard();
+
+                    venta.Ingreso = Convert.ToDouble(dataReader[0]);
+                    venta.Cantidad = Convert.ToInt32(dataReader[1]);
+                    venta.Mes = Convert.ToInt32(dataReader[2]);
+                    venta.Anio = Convert.ToInt32(dataReader[3]);
+
+                    ventas.Add(venta);
+
+                }
+            }
+
+            conexion.Close();
+
+            return ventas;
+        }
+
+        public List<DTOVentaDashboard> ObtenerVentasPorMes()
+        {
+            var ventas = new List<DTOVentaDashboard>();
+
+            SqlCommand command = new SqlCommand("SP_ObtenerVentas_Por_Mes", conexion)
+            {
+                CommandType = CommandType.StoredProcedure,
+                CommandTimeout = 600
+            };
+
+            conexion.Open();
+
+            var dataReader = command.ExecuteReader();
+
+            using (dataReader)
+            {
+                while (dataReader.Read())
+                {
+                    var venta = new DTOVentaDashboard();
+
+                    venta.Ingreso = Convert.ToDouble(dataReader[0]);
+                    venta.Cantidad = Convert.ToInt32(dataReader[1]);
+                    venta.Mes = Convert.ToInt32(dataReader[2]);
+
+                    ventas.Add(venta);
+
+                }
+            }
+
+            conexion.Close();
+
+            return ventas;
+        }
+
+        public DTOIngresosTotalDashboard ObtenerIngresosTotales()
+        {
+            var ingresosTotales = new DTOIngresosTotalDashboard();
+
+            SqlCommand command = new SqlCommand("SP_ObtenerIngresosTotales", conexion)
+            {
+                CommandType = CommandType.StoredProcedure,
+                CommandTimeout = 600
+            };
+
+            conexion.Open();
+
+            var dataReader = command.ExecuteReader();
+
+            using (dataReader)
+            {
+                while (dataReader.Read())
+                {
+                    ingresosTotales.IngresoDiario = Convert.ToDouble(dataReader[0]);
+                    ingresosTotales.IngresoSemanal = Convert.ToDouble(dataReader[1]);
+                    ingresosTotales.IngresoMensual = Convert.ToDouble(dataReader[2]);
+                }
+            }
+
+            conexion.Close();
+
+            return ingresosTotales;
+        }
+
         public DTOVentaCatalogoDashboard ObtenerVentasCatalogo()
         {
             var ventaCatalogoDashboard = new DTOVentaCatalogoDashboard();
@@ -151,8 +249,8 @@ namespace DAO_
             {
                 while (dataReader.Read())
                 {
-                    ingresosDashboard.TotalIngresos = Convert.ToInt32(dataReader[0]);
-                    ingresosDashboard.TotalIngresosMensual = Convert.ToInt32(dataReader[1]);
+                    ingresosDashboard.TotalIngresos = Convert.ToDouble(dataReader[0]);
+                    ingresosDashboard.TotalIngresosMensual = Convert.ToDouble(dataReader[1]);
                 }
             }
 

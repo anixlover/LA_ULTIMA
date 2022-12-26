@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DTO.Visualizacion
 {
-    public class DTOIngresoDashboard
+    public class DTOVentaAnualDashboard : DTOVentaDashboard
     {
-        public double TotalIngresos { get; set; } = 0;
-        public double TotalIngresosMensual { get; set; } = 0;
+        public int Anio { get; set; }
     }
 }
