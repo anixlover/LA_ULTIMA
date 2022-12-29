@@ -145,8 +145,9 @@ namespace WEB
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
+                
                 DropDownList ddlMXUEstados = (e.Row.FindControl("ddlEstados") as DropDownList);
-                ddlMXUEstados.DataSource = objCtrMXUEstado.ListarEstados();
+                ddlMXUEstados.DataSource = objCtrMXUEstado.ListarEstados(e.Row.Cells[5].Text.ToLower());
                 ddlMXUEstados.DataTextField = "VMXUE_Nombre";
                 ddlMXUEstados.DataValueField = "PK_IMXUE_Cod";              
                 ddlMXUEstados.DataBind();
@@ -177,7 +178,7 @@ namespace WEB
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 DropDownList ddlMXUEstados = (e.Row.FindControl("ddlEstados2") as DropDownList);
-                ddlMXUEstados.DataSource = objCtrMXUEstado.ListarEstados();
+                ddlMXUEstados.DataSource = objCtrMXUEstado.ListarEstados(e.Row.Cells[5].Text.ToLower());
                 ddlMXUEstados.DataTextField = "VMXUE_Nombre";
                 ddlMXUEstados.DataValueField = "PK_IMXUE_Cod";
                 ddlMXUEstados.DataBind();

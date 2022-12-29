@@ -16,9 +16,10 @@ namespace DAO
         {
             conexion = new SqlConnection(ConexionBD.CadenaConexion);
         }
-        public DataSet SelectMXUEstado()
+        public DataSet SelectMXUEstado(string estados)
         {
-            SqlDataAdapter Estado = new SqlDataAdapter("SELECT*FROM T_MXU_ESTADO WHERE PK_IMXUE_Cod>=6 AND PK_IMXUE_Cod<=11", conexion);
+            SqlDataAdapter Estado = new SqlDataAdapter($"SELECT*FROM T_MXU_ESTADO WHERE PK_IMXUE_Cod IN({ estados })", conexion);
+           
             DataSet DS = new DataSet();
             Estado.Fill(DS);
             return DS;
