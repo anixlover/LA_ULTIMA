@@ -333,7 +333,9 @@ namespace WEB
                 prgImp.SpacingAfter = 5;
                 prgImp.IndentationLeft = 245;
                 //prgImp.Alignment = Element.ALIGN_RIGHT;
-                prgImp.Add(new Chunk("Importe total: S/." + txtimporttot.Text, fntHead));
+                prgImp.Add(new Chunk("Total Valor Venta: S/." + (int.Parse(txtimporttot.Text) - (int.Parse(txtimporttot.Text) * 0.18)).ToString(), fntHead) + System.Environment.NewLine);
+                prgImp.Add(new Chunk("IGV: S/." + (int.Parse(txtimporttot.Text) * 0.18 ).ToString(), fntHead) + System.Environment.NewLine);
+                prgImp.Add(new Chunk("Importe Total: S/." + txtimporttot.Text, fntHead));
                 document.Add(prgImp);
                 document.Close();
                 byte[] bytes = memoryStream.ToArray();
