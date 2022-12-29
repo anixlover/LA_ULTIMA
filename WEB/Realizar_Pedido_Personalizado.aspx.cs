@@ -97,7 +97,6 @@ namespace WEB
                 Utils.AddScriptClientUpdatePanel(upBotonRegistrar, "showSuccessMessage6()");
             }
 
-
             try
             {
                 //if (rbCatalogo.Checked == true)

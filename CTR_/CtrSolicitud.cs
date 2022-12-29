@@ -57,6 +57,14 @@ namespace CTR
         {
             objDaoSolicitud.UpdateEstadoSolicitud_RevisióPago(objDtoSolicitud);
         }
+        public void Actualizar_Recotizacion(DtoSolicitud objsolicitud)
+        {
+            objDaoSolicitud.Actualizar_Recotizacion(objsolicitud);
+        }
+        public void Select_Solicitud_ID(DtoSolicitud objsolicitud)
+        {
+            objDaoSolicitud.Select_Solicitud_ID(objsolicitud);
+        }
         public string HayPago(DtoSolicitud objsol)
         {
             return objDaoSolicitud.SelectSolicitudPago(objsol);
@@ -174,7 +182,7 @@ namespace CTR
         }
         public DataTable MostrarIncidentes(DtoSolicitud objDtoSolicitud)
         {
-           return objDaoSolicitud.SelectIncidentesxSolicitud(objDtoSolicitud);
+            return objDaoSolicitud.SelectIncidentesxSolicitud(objDtoSolicitud);
         }
         public void Terminar(DtoSolicitud objDtoSolicitud)
         {

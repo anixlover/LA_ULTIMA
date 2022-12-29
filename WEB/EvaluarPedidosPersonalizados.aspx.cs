@@ -30,7 +30,7 @@ namespace WEB
         }
         protected Boolean ValidacionEstado(string estado)
         {
-            return estado == "En aprobación";
+            return estado == "En aprobación" || estado == "En recotización";
         }
         public void cargarSolicitudes()
         {
@@ -86,6 +86,7 @@ namespace WEB
             objDtoSolicitud.IS_Ndias = int.Parse(txtNdias.Text);
             objDtoSolicitud.DS_ImporteTotal = double.Parse(txtImporte.Text);
             objCtrSolicitud.AsignarFecha_e_Importe(objDtoSolicitud);
+
             ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Evaluación Realizada!',text: 'Datos ENVIADOS!!'}).then(function(){window.location.href='EvaluarPedidosPersonalizados.aspx'})", true);
         }
 

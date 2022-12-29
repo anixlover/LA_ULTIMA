@@ -27,43 +27,43 @@
 
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <div class="row">
-             <div class="col-12">
-            <div class="page-title-box pl-0">
-                <h4 class="page-title">EVALUAR PEDIDOS</h4>
-            </div>
-            <div class="card-box">
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <asp:GridView ID="gvPersonalizado" runat="server" DataKeyNames="PK_IS_Cod" AutoGenerateColumns="False"
-                            EmptyDataText="No existen registros" ShowHeaderWhenEmpty="True" CssClass="table-borderless table table-bordered table-hover" Width="100%" OnRowCommand="gvPersonalizado_RowCommand"
-                            AllowPaging="true" PageSize="4" OnPageIndexChanging="gvPersonalizado_PageIndexChanging"
-                            HeaderStyle-CssClass="thead-dark">
-                            <Columns>
-                                <asp:TemplateField HeaderText="Imagen">
-                                    <ItemTemplate>
-                                        <img src='ObtenerImegenPersonalizada_2.ashx?id=<%# Eval("PK_IS_Cod")%>' height="60px" width="60px" />
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:BoundField DataField="PK_IS_Cod" HeaderText="Código de solicitud" />
-                                <asp:BoundField DataField="VS_TipoSolicitud" HeaderText="Tipo" />
-                                <asp:BoundField DataField="PK_VU_Dni" HeaderText="DNI" />
-                                <asp:BoundField DataField="Cliente" HeaderText="Cliente" />
-                                <asp:BoundField DataField="VSE_Nombre" HeaderText="Estado" />
-                                <asp:TemplateField HeaderText="Accion">
-                                    <ItemTemplate>
-                                        <asp:Button runat="server" DataKeyNames="PK_IS_Cod,VSE_Nombre" ID="btnGetDatos" Text="Evaluar" 
-                                            Visible='<%# ValidacionEstado(Eval("VSE_Nombre").ToString()) %>'
-                                            CommandName="Evaluar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-soft-blue" data-toggle="modal" data-target="#modalDetalle" />
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+            <div class="col-12">
+                <div class="page-title-box pl-0">
+                    <h4 class="page-title">EVALUAR PEDIDOS</h4>
+                </div>
+                <div class="card-box">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                        <ContentTemplate>
+                            <asp:GridView ID="gvPersonalizado" runat="server" DataKeyNames="PK_IS_Cod" AutoGenerateColumns="False"
+                                EmptyDataText="No existen registros" ShowHeaderWhenEmpty="True" CssClass="table-borderless table table-bordered table-hover" Width="100%" OnRowCommand="gvPersonalizado_RowCommand"
+                                AllowPaging="true" PageSize="4" OnPageIndexChanging="gvPersonalizado_PageIndexChanging"
+                                HeaderStyle-CssClass="thead-dark">
+                                <Columns>
+                                    <asp:TemplateField HeaderText="Imagen">
+                                        <ItemTemplate>
+                                            <img src='ObtenerImegenPersonalizada_2.ashx?id=<%# Eval("PK_IS_Cod")%>' height="60px" width="60px" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:BoundField DataField="PK_IS_Cod" HeaderText="Código de solicitud" />
+                                    <asp:BoundField DataField="VS_TipoSolicitud" HeaderText="Tipo" />
+                                    <asp:BoundField DataField="PK_VU_Dni" HeaderText="DNI" />
+                                    <asp:BoundField DataField="Cliente" HeaderText="Cliente" />
+                                    <asp:BoundField DataField="VSE_Nombre" HeaderText="Estado" />
+                                    <asp:TemplateField HeaderText="Accion">
+                                        <ItemTemplate>
+                                            <asp:Button runat="server" DataKeyNames="PK_IS_Cod,VSE_Nombre" ID="btnGetDatos" Text="Evaluar"
+                                                Visible='<%# ValidacionEstado(Eval("VSE_Nombre").ToString()) %>'
+                                                CommandName="Evaluar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-soft-blue" data-toggle="modal" data-target="#modalDetalle" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
             </div>
         </div>
-        </div>
-       
+
         <div class="modal fade" id="modalDetalle" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-lg" role="dialog">
                 <div class="modal-content">
@@ -91,19 +91,34 @@
                                             Largo:
                                         <asp:Label ID="lblLargo" runat="server" ClientIDMode="Static"></asp:Label>
                                         </p>
-                                        <p style="color: #000000; font-style: normal; font-weight: bold">Cantidad:
-                                            <asp:Label ID="lblcantidad" runat="server" Text="0"></asp:Label></p>
-                                        <p style="color: #000000; font-style: normal; font-weight: bold">Precio Aprox: S./<asp:Label ID="lblprecio" runat="server" ClientIDMode="Static"></asp:Label></p>
-                                        <p style="color: #000000; font-style: normal; font-weight: bold">Dias de elaboración:<asp:TextBox ID="txtNdias" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                                        <p style="color: #000000; font-style: normal; font-weight: bold">
+                                            Cantidad:
+                                            <asp:Label ID="lblcantidad" runat="server" Text="0"></asp:Label>
                                         </p>
-                                        <p style="color: #000000; font-style: normal; font-weight: bold">Importe Total:<asp:TextBox ID="txtImporte" CssClass="form-control" runat="server" TextMode="Number" step=".01"></asp:TextBox>
+                                        <p style="color: #000000; font-style: normal; font-weight: bold">Precio Aprox: S./<asp:Label ID="lblprecio" runat="server" ClientIDMode="Static"></asp:Label></p>
+                                        <p style="color: #000000; font-style: normal; font-weight: bold">
+                                            Dias de elaboración:
+                                            <asp:TextBox ID="txtNdias" CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
                                         </p>
                                         <p style="color: #000000; font-style: normal; font-weight: bold">
-                                            Observación:
-                                            <asp:TextBox ID="txtObservacion" CssClass="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
+                                            Importe Total:<asp:TextBox ID="txtImporte" CssClass="form-control" runat="server" TextMode="Number" step=".01"></asp:TextBox>
+                                        </p>
+                                    </div>
+                                    <br />
+                                    <div class="col-12">
+                                        <p style="color: #000000; font-style: normal; font-weight: bold">
+                                            Comentario:
+                                            <br />
+                                            <asp:Label ID="lblcomentario" runat="server" ClientIDMode="Static"></asp:Label>
+                                            <br />
+                                            Cotización:
+                                            <asp:TextBox ID="txtObservacion" CssClass="form-control" runat="server" TextMode="MultiLine" style="height: 360px;"></asp:TextBox>
+                                            <br />
+
                                             <asp:Button ID="btnAsignarFecha_Importe" runat="server" Text="Asignar" CssClass="btn btn-warning" OnClick="btnAsignarFecha_Importe_Click" />
                                             <asp:Button ID="btnRechazar" runat="server" Text="Rechazar" CssClass="btn btn-danger" OnClick="btnRechazar_Click1" />
                                             <asp:Button ID="btnMandarObservacion" runat="server" Text="Mandar Observación" CssClass="btn btn-primary" OnClick="btnMandarObservacion_Click" />
+                                    
                                     </div>
                                 </div>
                             </div>

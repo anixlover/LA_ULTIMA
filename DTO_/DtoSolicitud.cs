@@ -16,6 +16,7 @@ namespace DTO
         public double DS_Descuento { get; set; }
         public double DS_ImporteTotal { get; set; }
         public string VS_Comentario { get; set; }
+        public string VS_Mcotizacion { get; set; }
         public DateTime DTS_FechaEmicion { get; set; }
         public DateTime DTS_FechaRegistro { get; set; }
         public int IS_Ndias { get; set; }

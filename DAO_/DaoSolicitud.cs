@@ -66,7 +66,7 @@ namespace DAO
         }
         public bool SelectSolicitudDiseñoPersonalizado(DtoSolicitud objsol)
         {
-            string Select = "SELECT  [PK_IS_Cod],[VS_TipoSolicitud],[VBS_Imagen],[DS_Largo],[DS_Ancho],[IS_Cantidad],[DS_PrecioAprox],[DS_Descuento], Isnull([DS_ImporteTotal],0),[VS_Comentario],[DTS_FechaEmicion],[DTS_FechaRegistro],[IS_Ndias],[DTS_FechaRecojo],[IS_EstadoPago],[FK_ISE_Cod] from T_SOLICITUD where PK_IS_Cod =" + objsol.PK_IS_Cod;
+            string Select = "SELECT  [PK_IS_Cod],[VS_TipoSolicitud],[VBS_Imagen],[DS_Largo],[DS_Ancho],[IS_Cantidad],[DS_PrecioAprox],[DS_Descuento], Isnull([DS_ImporteTotal],0),[VS_Comentario],[VS_Mcotizacion],[DTS_FechaEmicion],[DTS_FechaRegistro],[IS_Ndias],[DTS_FechaRecojo],[IS_EstadoPago],[FK_ISE_Cod] from T_SOLICITUD where PK_IS_Cod =" + objsol.PK_IS_Cod;
             SqlCommand unComando = new SqlCommand(Select, conexion);
             conexion.Open();
             SqlDataReader reader = unComando.ExecuteReader();
@@ -82,6 +82,8 @@ namespace DAO
             conexion.Close();
             return hayRegistros;
         }
+
+
         public DataTable SelectSolicitudesTrabajador()
         {
             DataTable dtsolicitudes = null;
@@ -148,6 +150,20 @@ namespace DAO
             unComando.ExecuteNonQuery();
             conexion.Close();
         }
+        public void Actualizar_Recotizacion(DtoSolicitud objsolicitud)
+        {
+            SqlCommand command = new SqlCommand("SP_ActualizarSol_Recotización", conexion);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@sol", objsolicitud.PK_IS_Cod);
+            command.Parameters.AddWithValue("@largo", objsolicitud.DS_Largo);
+            command.Parameters.AddWithValue("@ancho", objsolicitud.DS_Ancho);
+            command.Parameters.AddWithValue("@cant", objsolicitud.IS_Cantidad);
+            command.Parameters.AddWithValue("@comen", objsolicitud.VS_Comentario);
+            conexion.Open();
+            command.ExecuteNonQuery();
+            conexion.Close();
+            //SP_ActualizarSol_Recotización
+        }
         public void UpdateEstadoSolicitud_Rechazado(DtoSolicitud objsolicitud)
         {
             string update = "UPDATE T_SOLICITUD SET FK_ISE_Cod = 4 Where PK_IS_Cod=" + objsolicitud.PK_IS_Cod;
@@ -180,6 +196,15 @@ namespace DAO
             string update = "UPDATE T_SOLICITUD SET FK_ISE_Cod = 5 Where PK_IS_Cod=" + objsolicitud.PK_IS_Cod;
             //string update = "UPDATE T_Solicitud SET FK_ISE_Cod = 6, DTS_FechaEmicion='"+ DateTime.Today.Date +"' Where PK_IS_Cod=" + objsolicitud.PK_IS_Cod;
             SqlCommand unComando = new SqlCommand(update, conexion);
+            conexion.Open();
+            unComando.ExecuteNonQuery();
+            conexion.Close();
+        }
+
+        public void Select_Solicitud_ID(DtoSolicitud objsolicitud)
+        {
+            string select = "SELECT [VS_TIPOSOLICITUD],[DS_LARGO],[DS_ANCHO],[IS_CANTIDAD],[VS_COMENTARIO],[VS_MCOTIZACION FROM T_SOLICITUD WHERE PK_IS_COD=" + objsolicitud.PK_IS_Cod;
+            SqlCommand unComando = new SqlCommand(select, conexion);
             conexion.Open();
             unComando.ExecuteNonQuery();
             conexion.Close();
