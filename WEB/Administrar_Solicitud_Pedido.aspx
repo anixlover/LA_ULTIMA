@@ -28,14 +28,10 @@
                 <h4 class="header-title">CARRITO DE COMPRAS</h4>
                 <p></p>
 
-
                 <%--                <button id="demo-delete-row" class="btn btn-danger btn-sm" disabled><i class="mdi mdi-trash-can mr-1"></i>Delete</button>--%>
-
 
                 <%--TABLA--%>
                 <%--CssClass="table-borderless table table-bordered table-hover"--%>
-
-
                 <%--HeaderStyle-CssClass="table-borderless"--%>
                 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
                 <asp:UpdatePanel ID="UpdatePanel" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="false">

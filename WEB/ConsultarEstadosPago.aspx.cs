@@ -201,7 +201,6 @@ namespace WEB
                 }
                 catch (Exception ex)
                 {
-
                     _log.CustomWriteOnLog("Consultar Estado Pago", ex.Message + "Stac" + ex.StackTrace);
 
                     throw;
