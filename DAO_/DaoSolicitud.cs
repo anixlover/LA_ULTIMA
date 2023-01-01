@@ -203,7 +203,7 @@ namespace DAO
 
         public void Select_Solicitud_ID(DtoSolicitud objsolicitud)
         {
-            string select = "SELECT [VS_TIPOSOLICITUD],[DS_LARGO],[DS_ANCHO],[IS_CANTIDAD],[VS_COMENTARIO],[VS_MCOTIZACION FROM T_SOLICITUD WHERE PK_IS_COD=" + objsolicitud.PK_IS_Cod;
+            string select = "SELECT [VS_TIPOSOLICITUD],[DS_LARGO],[DS_ANCHO],[IS_CANTIDAD],[VS_COMENTARIO],[VS_MCOTIZACION] FROM T_SOLICITUD WHERE PK_IS_COD=" + objsolicitud.PK_IS_Cod;
             SqlCommand unComando = new SqlCommand(select, conexion);
             conexion.Open();
             unComando.ExecuteNonQuery();
