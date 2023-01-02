@@ -362,6 +362,7 @@ namespace DAO
             unComando.ExecuteNonQuery();
             conexion.Close();
         }
+        
         public void Actualizar_Estado_SolicitudX1PDP(DtoSolicitud objsol)
         {
             string update = "UPDATE T_SOLICITUD SET FK_ISE_Cod = 8, DTS_FechaRegistro=GETDATE() where PK_IS_Cod =" + objsol.PK_IS_Cod;

@@ -145,6 +145,16 @@ namespace DAO
             command.ExecuteNonQuery();
             conexion.Close();
         }
+        
+        public void Actualizar_Estado_MXU(DtoMolduraXUsuario objDtoMolduraXUsuario)
+        {
+            string select = "Update T_MOLDURAXUSUARIO set [FK_IMXUE_Cod] = 6 where FK_IS_Cod=" + objDtoMolduraXUsuario.FK_IS_Cod;
+            SqlCommand command = new SqlCommand(select, conexion);
+            conexion.Open();
+            command.ExecuteNonQuery();
+            conexion.Close();
+        }
+
         public void UpdateCantMoldesCeroMXU_x_codigo(DtoMolduraXUsuario objDtoMolduraXUsuario)
         {
             string select = "Update T_MOLDURAXUSUARIO set [IMU_MoldesUsados] =0 where FK_IS_Cod=" + objDtoMolduraXUsuario.FK_IS_Cod + " and FK_IM_Cod=" + objDtoMolduraXUsuario.FK_IM_Cod;

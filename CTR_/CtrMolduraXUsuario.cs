@@ -41,6 +41,11 @@ namespace CTR
         {
             objDaoMolduraXUsuario.eliminarMXU(objdtoMolduraxUsuario);
         }
+        public void Actualizar_Estado_MXU(DtoMolduraXUsuario objdtoMolduraxUsuario)
+        {
+            objDaoMolduraXUsuario.Actualizar_Estado_MXU(objdtoMolduraxUsuario);
+        }
+
         public DataTable ListarSolicitudesxDNI(DtoMolduraXUsuario objDtoMolduraXUsuario)
         {
             return objDaoMolduraXUsuario.SelectSolicitudesxDNI(objDtoMolduraXUsuario);

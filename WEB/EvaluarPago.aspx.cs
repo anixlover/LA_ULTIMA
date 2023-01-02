@@ -25,6 +25,7 @@ namespace WEB
         Dto_Voucher dtovoucher = new Dto_Voucher();
         DtoUsuario dtousu = new DtoUsuario();
         CtrSolicitud ctrsol = new CtrSolicitud();
+        CtrMolduraXUsuario ctrMXU = new CtrMolduraXUsuario();
         CtrUsuario ctrusu = new CtrUsuario();
         Ctr_Voucher ctrvoucher = new Ctr_Voucher();
         CtrPago ctrpago = new CtrPago();
@@ -124,10 +125,12 @@ namespace WEB
                     //ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Actualizado Correctamente!',text: 'Datos ENVIADOS!!'}).then(function(){window.location.href='Administrar_Pedido.aspx'})", true);
                     ////Utils.AddScriptClientUpdatePanel(updPanelddl, "showSuccessMessage2()");
                     dtosol.PK_IS_Cod = Convert.ToInt32(Session["idSolicitudPago"].ToString());
+                    dtomxu.FK_IS_Cod = Convert.ToInt32(Session["idSolicitudPago"].ToString());
                     ctrsol.leerSolicitudTipo(dtosol);
                     if (dtosol.VS_TipoSolicitud == "Catalogo" | dtosol.VS_TipoSolicitud == "Personalizado por catalogo")
                     {
                         ctrsol.Actualizar_Estado_Solicitud(dtosol);
+                        ctrMXU.Actualizar_Estado_MXU(dtomxu);
                         ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Actualizado Correctamente!',text: 'Datos ENVIADOS!!'}).then(function(){window.location.href='Administrar_Pedido.aspx'})", true);
                     }
                     else if (dtosol.VS_TipoSolicitud == "Personalizado por diseño propio")
