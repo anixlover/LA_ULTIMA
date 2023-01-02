@@ -63,7 +63,9 @@
                                         <asp:Button runat="server" Text="Recotizar"
                                             Visible='<%# ValidacionEstado7(Eval("VSE_Nombre").ToString(),Eval("VS_TipoSolicitud").ToString()) %>'
                                             CommandName="Recotizar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" data-toggle="modal" data-target="#modalRecotizar" />
-
+                                        <asp:Button runat="server" Text="Cotizacion"
+                                            Visible='<%# ValidacionEstado8(Eval("VSE_Nombre").ToString(),Eval("VS_TipoSolicitud").ToString()) %>'
+                                            CommandName="Cotizacion" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-blue" data-toggle="modal" data-target="#modalCotizacion" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
@@ -299,6 +301,31 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modalCotizacion" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <asp:UpdatePanel runat="server" ID="updPanelModal1" UpdateMode="Always">
+                    <ContentTemplate>
+                        <div class="modal-header navbar">
+                            <h4 class="modal-title" id="H2" runat="server">Cotización</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: center">
+                                    <asp:TextBox ID="txtDetalleCotizacion" class="form-control" runat="server" TextMode="MultiLine" Style="height: 200px;"></asp:TextBox>
+                                    <%--<input id="Hidden2" class="form-control" runat="server" clientidmode="Static" type="hidden" />--%>
+                                </div>
+                            </div>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <script>
         function showSuccessMessage2() {

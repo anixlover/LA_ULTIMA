@@ -62,7 +62,11 @@ namespace WEB
         }
         protected Boolean ValidacionEstado7(string estado, string tipo)
         {
-            return estado == "Rechazada";
+            return estado == "Rechazada" & tipo == "Personalizado por diseño propio";
+        }
+        protected Boolean ValidacionEstado8(string estado, string tipo)
+        {
+            return estado == "Pendiente de revisión de fecha" || estado == "En proceso" || estado == "Pendiente de pago" || estado == "Con retraso" || estado == "Terminada" || estado == "Entregada" & tipo == "Personalizado por diseño propio";
         }
         protected Boolean ValidacionPersonalizado(string id)
         {
@@ -205,6 +209,32 @@ namespace WEB
                 {
                     _log.CustomWriteOnLog("Consultar Estado Pago", ex.Message + "Stac" + ex.StackTrace);
 
+                    throw;
+                }
+            }
+            if (e.CommandName == "Cotizacion")
+            {
+                _log.CustomWriteOnLog("Consultar Estado Pago", "-----------------------ENTRO A DETALLES DE COTIZACIÓN----------------------");
+                _log.CustomWriteOnLog("Consultar Estado Pago", "Obtenemos Detalle");
+                try
+                {
+                    int index = Convert.ToInt32(e.CommandArgument);
+                    GridViewRow row = gvPedidos.Rows[index];
+                    Button b = (Button)row.FindControl("btnGetDatos");
+                    string id = row.Cells[0].Text;
+                    objDtoSolicitud.PK_IS_Cod = int.Parse(id);
+
+                    DtoMoldura objDtoMoldura = new DtoMoldura();
+                    DtoTipoMoldura dtoTipoMoldura = new DtoTipoMoldura();
+                    CtrSolicitud objCtrSolicitud2 = new CtrSolicitud();
+                    //Select_Detalle_Cotizacíon_ID
+                    objCtrSolicitud2.Select_Detalle_Cotizacíon_ID(objDtoSolicitud);
+                    txtDetalleCotizacion.Text = objDtoSolicitud.VS_Mcotizacion;
+                    _log.CustomWriteOnLog("Consultar Estado Pago", "Cotizacion: " + objDtoSolicitud.VS_Mcotizacion);
+                }
+                catch (Exception ex)
+                {
+                    _log.CustomWriteOnLog("Consultar Estado Pago", ex.Message + "Stac" + ex.StackTrace);
                     throw;
                 }
             }

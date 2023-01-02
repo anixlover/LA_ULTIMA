@@ -84,7 +84,7 @@ namespace WEB
             _log.CustomWriteOnLog("EvaluarPedidoPersonalizado", "ENTRO A BOTON ASIGNAR");
 
             objDtoSolicitud.PK_IS_Cod = int.Parse(lblid.Text);
-            if (txtImporte.Text == ""| txtNdias.Text == "" )
+            if (txtImporte.Text == ""| txtNdias.Text == "" | txtObservacion.Text == "")
             {
                 ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type:'error',title:'ERROR!',text:'Complete espacios en BLANCO!!'})", true);
                 return;
@@ -96,6 +96,7 @@ namespace WEB
             }
             objDtoSolicitud.IS_Ndias = int.Parse(txtNdias.Text);
             objDtoSolicitud.DS_ImporteTotal = double.Parse(txtImporte.Text);
+            objDtoSolicitud.VS_Mcotizacion = txtObservacion.Text;
             objCtrSolicitud.AsignarFecha_e_Importe(objDtoSolicitud);
 
             ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Evaluación Realizada!',text: 'Datos ENVIADOS!!'}).then(function(){window.location.href='EvaluarPedidosPersonalizados.aspx'})", true);

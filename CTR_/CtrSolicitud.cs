@@ -65,6 +65,10 @@ namespace CTR
         {
             objDaoSolicitud.Select_Solicitud_ID(objsolicitud);
         }
+        public void Select_Detalle_Cotizacíon_ID(DtoSolicitud objsolicitud)
+        {
+            objDaoSolicitud.Select_Detalle_Cotizacíon_ID(objsolicitud);
+        }
         public string HayPago(DtoSolicitud objsol)
         {
             return objDaoSolicitud.SelectSolicitudPago(objsol);

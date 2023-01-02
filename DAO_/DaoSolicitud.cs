@@ -230,6 +230,27 @@ namespace DAO
             conexion.Dispose();
         }
 
+        public void Select_Detalle_Cotizacíon_ID(DtoSolicitud objsolicitud)
+        {
+            string select = "SELECT [VS_MCOTIZACION] FROM T_SOLICITUD WHERE PK_IS_COD=" + objsolicitud.PK_IS_Cod;
+            SqlCommand unComando = new SqlCommand(select, conexion);
+            DataSet ds = new DataSet();
+            conexion.Open();
+            SqlDataAdapter da = new SqlDataAdapter(unComando);
+            da.Fill(ds);
+            da.Dispose();
+
+            SqlDataReader reader = unComando.ExecuteReader();
+
+            while (reader.Read())
+            {
+                objsolicitud.VS_Mcotizacion = reader[0].ToString();
+            }
+
+            conexion.Close();
+            conexion.Dispose();
+        }
+
         public DataTable SelectSolicitudes()
         {
             DataTable dtsolicitudes = null;
@@ -381,11 +402,20 @@ namespace DAO
         }
         public void UpdateSolicitudFecha_RevisionFecha(DtoSolicitud objsol)
         {
-            string update = "UPDATE T_Solicitud SET DTS_FechaRecojo=CAST(DATEADD(day," + objsol.IS_Ndias + ",GETDATE()) AS DATE),FK_ISE_Cod=3, DS_ImporteTotal="+objsol.DS_ImporteTotal+", IS_Ndias="+objsol.IS_Ndias+" where PK_IS_Cod =" + objsol.PK_IS_Cod;
-            SqlCommand unComando = new SqlCommand(update, conexion);
+            SqlCommand command = new SqlCommand("SP_AsignarFecha_e_Importe", conexion);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@sol", objsol.PK_IS_Cod);
+            command.Parameters.AddWithValue("@dias", objsol.IS_Ndias);
+            command.Parameters.AddWithValue("@importe", objsol.DS_ImporteTotal);
+            command.Parameters.AddWithValue("@comen", objsol.VS_Mcotizacion);
             conexion.Open();
-            unComando.ExecuteNonQuery();
+            command.ExecuteNonQuery();
             conexion.Close();
+            //string update = "UPDATE T_Solicitud SET DTS_FechaRecojo=CAST(DATEADD(day," + objsol.IS_Ndias + ",GETDATE()) AS DATE),FK_ISE_Cod=3, DS_ImporteTotal=" + objsol.DS_ImporteTotal + ", IS_Ndias=" + objsol.IS_Ndias + ", VS_Mcotizacion=" + objsol.VS_Mcotizacion + " where PK_IS_Cod =" + objsol.PK_IS_Cod;
+            //SqlCommand unComando = new SqlCommand(update, conexion);
+            //conexion.Open();
+            //unComando.ExecuteNonQuery();
+            //conexion.Close();
         }
         public void UpdateSolicitudFecha_Terminado(DtoSolicitud objsol)
         {
