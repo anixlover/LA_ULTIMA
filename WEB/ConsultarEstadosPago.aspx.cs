@@ -175,10 +175,12 @@ namespace WEB
 
                     DtoMoldura objDtoMoldura = new DtoMoldura();
                     DtoTipoMoldura dtoTipoMoldura = new DtoTipoMoldura();
+                    CtrSolicitud objCtrSolicitud2 = new CtrSolicitud();
+
                     objCtrMolduraxUsuario.obtenerMoldura(objDtoMolduraxUsuario, objDtoMoldura, dtoTipoMoldura);
                     objctrMoldura.ObtenerMoldura(objDtoMoldura, dtoTipoMoldura);
                     txtcodigoModal.Text = objDtoSolicitud.PK_IS_Cod.ToString();
-                    objCtrSolicitud.Select_Solicitud_ID(objDtoSolicitud);
+                    objCtrSolicitud2.Select_Solicitud_ID(objDtoSolicitud);
                     //txtcodM.Text = objDtoMoldura.PK_IM_Cod.ToString();
                     txtTMModal.Text = dtoTipoMoldura.VTM_Nombre;
                     txtlargo.Text = objDtoSolicitud.DS_Largo.ToString();
@@ -283,26 +285,39 @@ namespace WEB
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            _log.CustomWriteOnLog("Consultar Estado Pago", "-----------------------ENTRO AL BOTON RECOTIZAR----------------------");
-            objDtoSolicitud.PK_IS_Cod = int.Parse(txtcodigoModal.Text);
-            if (txtlargo.Text == "" | txtancho.Text == "" | txtcantidadModal.Text == "")
+            try
             {
-                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type:'error',title:'ERROR!',text:'Complete espacios en BLANCO!!'})", true);
-                return;
+                _log.CustomWriteOnLog("Consultar Estado Pago", "-----------------------ENTRO AL BOTON RECOTIZAR----------------------");
+                objDtoSolicitud.PK_IS_Cod = int.Parse(txtcodigoModal.Text);
+                if (txtlargo.Text == "" | txtancho.Text == "" | txtcantidadModal.Text == "")
+                {
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type:'error',title:'ERROR!',text:'Complete espacios en BLANCO!!'})", true);
+                    return;
+                }
+                else if (int.Parse(txtcantidadModal.Text) <= 0 | int.Parse(txtlargo.Text) <= 0 | int.Parse(txtancho.Text) <= 0)
+                {
+                    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type:'error',title:'ERROR!',text:'Numero INVALIDO!!'})", true);
+                    return;
+                }
+                objDtoSolicitud.DS_Largo = double.Parse(txtlargo.Text);
+                objDtoSolicitud.DS_Ancho = double.Parse(txtancho.Text);
+                objDtoSolicitud.IS_Cantidad = int.Parse(txtcantidadModal.Text);
+                objDtoSolicitud.VS_Comentario = txtDescripcionModal.Text;
+
+                objCtrSolicitud.Actualizar_Recotizacion(objDtoSolicitud);
+                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Evaluación Realizada!',text: 'Datos ENVIADOS!!'})", true);
+                objDtoMolduraxUsuario.FK_VU_Dni = Session["DNIUsuario"].ToString();
+                UpdatePanel.Update();
+                gvPersonalizado2.DataSource = objCtrMolduraxUsuario.ListarSolicitudesxDNI(objDtoMolduraxUsuario);
+                Utils.AddScriptClientUpdatePanel(UpdatePanel, "showSuccessMessage2()");
             }
-            else if (int.Parse(txtcantidadModal.Text) <= 0 | int.Parse(txtlargo.Text) <= 0 | int.Parse(txtancho.Text) <= 0)
+            catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type:'error',title:'ERROR!',text:'Numero INVALIDO!!'})", true);
-                return;
+                _log.CustomWriteOnLog("Consultar Estado Pago", ex.Message + "Stac" + ex.StackTrace);
+
+                throw;
             }
-            objDtoSolicitud.DS_Largo = double.Parse(txtlargo.Text);
-            objDtoSolicitud.DS_Ancho = double.Parse(txtancho.Text);
-            objDtoSolicitud.IS_Cantidad = int.Parse(txtcantidadModal.Text);
-            objDtoSolicitud.VS_Comentario = txtDescripcionModal.Text;
-
-            objCtrSolicitud.Actualizar_Recotizacion(objDtoSolicitud);
-            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Evaluación Realizada!',text: 'Datos ENVIADOS!!'}).then(function(){window.location.href='EvaluarPedidosPersonalizados.aspx'})", true);
-
+            
         }
     }
 }

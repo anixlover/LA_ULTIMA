@@ -166,11 +166,12 @@ namespace DAO
         }
         public void UpdateEstadoSolicitud_Rechazado(DtoSolicitud objsolicitud)
         {
-            string update = "UPDATE T_SOLICITUD SET FK_ISE_Cod = 4 Where PK_IS_Cod=" + objsolicitud.PK_IS_Cod;
-            //string update = "UPDATE T_Solicitud SET FK_ISE_Cod = 6, DTS_FechaEmicion='"+ DateTime.Today.Date +"' Where PK_IS_Cod=" + objsolicitud.PK_IS_Cod;
-            SqlCommand unComando = new SqlCommand(update, conexion);
+            SqlCommand command = new SqlCommand("SP_ActualizarSol_Rechazo", conexion);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@sol", objsolicitud.PK_IS_Cod);
+            command.Parameters.AddWithValue("@mcotizacion", objsolicitud.VS_Mcotizacion);
             conexion.Open();
-            unComando.ExecuteNonQuery();
+            command.ExecuteNonQuery();
             conexion.Close();
         }
         public void UpdateEstadoSolicitud_Observacion(DtoSolicitud objsolicitud)
@@ -205,9 +206,28 @@ namespace DAO
         {
             string select = "SELECT [VS_TIPOSOLICITUD],[DS_LARGO],[DS_ANCHO],[IS_CANTIDAD],[VS_COMENTARIO],[VS_MCOTIZACION] FROM T_SOLICITUD WHERE PK_IS_COD=" + objsolicitud.PK_IS_Cod;
             SqlCommand unComando = new SqlCommand(select, conexion);
+            DataSet ds = new DataSet();
             conexion.Open();
-            unComando.ExecuteNonQuery();
+            SqlDataAdapter da = new SqlDataAdapter(unComando);
+            da.Fill(ds);
+            da.Dispose();
+
+            SqlDataReader reader = unComando.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                objsolicitud.VS_TipoSolicitud = reader[0].ToString();
+                objsolicitud.DS_Largo = Convert.ToDouble(reader[1].ToString());
+                objsolicitud.DS_Ancho = Convert.ToDouble(reader[2].ToString());
+                objsolicitud.IS_Cantidad = Convert.ToInt32(reader[3].ToString());
+                objsolicitud.VS_Comentario = reader[4].ToString();
+                objsolicitud.VS_Mcotizacion = reader[5].ToString();
+
+            }
+
             conexion.Close();
+            conexion.Dispose();
         }
 
         public DataTable SelectSolicitudes()

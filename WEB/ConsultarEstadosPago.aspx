@@ -215,7 +215,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4" hidden>
                                     <div class="row clearfix" style="justify-content: center;">
                                         <div class="form-group form-float">
                                             <label class="form-label">Tipo Moldura :</label>
@@ -271,7 +271,7 @@
                             <div class="col-md-12">
                                 <label class="form-label">Comentario :</label>
                                 <div class="form-line focused">
-                                    <asp:TextBox ID="txtDescripcionModal" class="form-control" runat="server" TextMode="MultiLine" Style="height: 85px;"></asp:TextBox>
+                                    <asp:TextBox ID="txtDescripcionModal" class="form-control" runat="server" TextMode="MultiLine" Style="height: 61px;"></asp:TextBox>
                                     <input id="txtprecior" class="form-control" runat="server" clientidmode="Static" type="hidden" />
 
                                 </div>
@@ -280,7 +280,7 @@
                             <div class="col-md-12">
                                 <label class="form-label">Cotización :</label>
                                 <div class="form-line focused">
-                                    <asp:TextBox ID="txtCotización" class="form-control" runat="server" TextMode="MultiLine" Style="height: 360px;"></asp:TextBox>
+                                    <asp:TextBox ID="txtCotización" class="form-control" runat="server" TextMode="MultiLine" Style="height: 103px;"></asp:TextBox>
                                     <input id="Hidden1" class="form-control" runat="server" clientidmode="Static" type="hidden" />
 
                                 </div>
@@ -299,6 +299,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function showSuccessMessage2() {
+            $('#defaultmodal').modal('hide');
+            swal(
+                'Excelente',
+                'Recotización Enviada!',
+                'success'
+            );
+        };
+    </script>
+
+
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
 
