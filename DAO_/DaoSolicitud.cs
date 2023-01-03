@@ -27,7 +27,7 @@ namespace DAO
             {
                 objsol.PK_IS_Cod = (int)reader[0];
                 objsol.VS_TipoSolicitud = (string)reader[1];
-                objsol.FK_ISE_Cod = (int)reader[15];
+                objsol.FK_ISE_Cod = (int)reader[16];
             }
             conexion.Close();
             return hayRegistros;

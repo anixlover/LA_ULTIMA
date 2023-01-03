@@ -148,7 +148,7 @@ namespace DAO
         
         public void Actualizar_Estado_MXU(DtoMolduraXUsuario objDtoMolduraXUsuario)
         {
-            string select = "Update T_MOLDURAXUSUARIO set [FK_IMXUE_Cod] = 6 where FK_IS_Cod=" + objDtoMolduraXUsuario.FK_IS_Cod;
+            string select = "Update T_MOLDURAXUSUARIO set [FK_IMXUE_Cod] = 5 where FK_IS_Cod=" + objDtoMolduraXUsuario.FK_IS_Cod;
             SqlCommand command = new SqlCommand(select, conexion);
             conexion.Open();
             command.ExecuteNonQuery();
@@ -186,7 +186,7 @@ namespace DAO
                 objDtoMolduraXUsuario.DMU_Precio = Convert.ToDouble(reader[4].ToString());
                 objDtoMolduraXUsuario.FK_IM_Cod = (int)reader[2];
                 objDtoMolduraXUsuario.FK_IMXUE_Cod = (int)reader[6];
-                objDtoMolduraXUsuario.IMU_MoldesUsados = (int)reader[7];
+                objDtoMolduraXUsuario.IMU_MoldesUsados = reader[7]!=null? (int)reader[7]: 0;
             }
             conexion.Close();
             return hayRegistros;

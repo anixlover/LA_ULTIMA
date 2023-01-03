@@ -64,9 +64,9 @@ namespace WEB
         {
             return estado == "Rechazada" & tipo == "Personalizado por diseño propio";
         }
-        protected Boolean ValidacionEstado8(string estado, string tipo)
+        protected Boolean ValidacionEstado8(string tipo, string estado)
         {
-            return estado == "Pendiente de revisión de fecha" || estado == "En proceso" || estado == "Pendiente de pago" || estado == "Con retraso" || estado == "Terminada" || estado == "Entregada" & tipo == "Personalizado por diseño propio";
+            return tipo == "Personalizado por diseño propio" & estado != "En aprobación";
         }
         protected Boolean ValidacionPersonalizado(string id)
         {
@@ -195,7 +195,7 @@ namespace WEB
                     txtprecior.Value = objDtoMoldura.DM_Precio.ToString();
                     objDtoSolicitud.VBS_Imagen = (byte[])objCtrSolicitud.RetornarImagenDiseñoPersonalizado(objDtoSolicitud).Rows[0][0];
                     Img1.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(objDtoSolicitud.VBS_Imagen);
-
+                    UpdatePanel.Update();
                     _log.CustomWriteOnLog("Consultar Estado Pago", "Cotizacion PK_IS_Cod" + objDtoSolicitud.PK_IS_Cod.ToString());
                     _log.CustomWriteOnLog("Consultar Estado Pago", "Cotizacion tipo moldura" + dtoTipoMoldura.VTM_Nombre);
                     _log.CustomWriteOnLog("Consultar Estado Pago", "Cotizacion largo" + objDtoSolicitud.DS_Largo.ToString());
@@ -335,7 +335,7 @@ namespace WEB
                 objDtoSolicitud.VS_Comentario = txtDescripcionModal.Text;
 
                 objCtrSolicitud.Actualizar_Recotizacion(objDtoSolicitud);
-                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Evaluación Realizada!',text: 'Datos ENVIADOS!!'})", true);
+                ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Evaluación Realizada!',text: 'Datos ENVIADOS!!'}).then(function(){window.location.href='ConsultarEstadosPago.aspx'})", true);
                 objDtoMolduraxUsuario.FK_VU_Dni = Session["DNIUsuario"].ToString();
                 UpdatePanel.Update();
                 gvPersonalizado2.DataSource = objCtrMolduraxUsuario.ListarSolicitudesxDNI(objDtoMolduraxUsuario);

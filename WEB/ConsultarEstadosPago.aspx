@@ -64,7 +64,7 @@
                                             Visible='<%# ValidacionEstado7(Eval("VSE_Nombre").ToString(),Eval("VS_TipoSolicitud").ToString()) %>'
                                             CommandName="Recotizar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" data-toggle="modal" data-target="#modalRecotizar" />
                                         <asp:Button runat="server" Text="Cotizacion"
-                                            Visible='<%# ValidacionEstado8(Eval("VSE_Nombre").ToString(),Eval("VS_TipoSolicitud").ToString()) %>'
+                                            Visible='<%# ValidacionEstado8(Eval("VS_TipoSolicitud").ToString(),Eval("VSE_Nombre").ToString()) %>'
                                             CommandName="Cotizacion" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-blue" data-toggle="modal" data-target="#modalCotizacion" />
                                     </ItemTemplate>
                                 </asp:TemplateField>
@@ -282,7 +282,7 @@
                             <div class="col-md-12">
                                 <label class="form-label">Cotización :</label>
                                 <div class="form-line focused">
-                                    <asp:TextBox ID="txtCotización" class="form-control" runat="server" TextMode="MultiLine" Style="height: 103px;"></asp:TextBox>
+                                    <asp:TextBox ID="txtCotización" class="form-control" runat="server" TextMode="MultiLine" Style="height: 103px;" ReadOnly></asp:TextBox>
                                     <input id="Hidden1" class="form-control" runat="server" clientidmode="Static" type="hidden" />
 
                                 </div>
@@ -291,7 +291,7 @@
                         <div class="modal-footer btn-group-sm">
                             <asp:UpdatePanel ID="UpdatePanelA" runat="server" UpdateMode="Conditional">
                                 <ContentTemplate>
-                                    <asp:Button ID="btnActualizar" runat="server" Text="Recotizar" CssClass="btn btn-warning btn-group-sm" OnClick="btnActualizar_Click" />
+                                    <asp:Button ID="btnActualizar" runat="server" Text="Recotizar" CssClass="btn btn-warning btn-group-sm" OnClick="btnActualizar_Click"/>
                                 </ContentTemplate>
                             </asp:UpdatePanel>
                             <button type="button" class="btn btn-link waves-effect" data-dismiss="modal">Cerrar</button>
@@ -313,7 +313,7 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-12" style="text-align: center">
-                                    <asp:TextBox ID="txtDetalleCotizacion" class="form-control" runat="server" TextMode="MultiLine" Style="height: 200px;"></asp:TextBox>
+                                    <asp:TextBox ID="txtDetalleCotizacion" class="form-control" runat="server" TextMode="MultiLine" Style="height: 200px;" ReadOnly></asp:TextBox>
                                     <%--<input id="Hidden2" class="form-control" runat="server" clientidmode="Static" type="hidden" />--%>
                                 </div>
                             </div>

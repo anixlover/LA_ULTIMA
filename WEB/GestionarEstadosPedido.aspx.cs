@@ -46,8 +46,10 @@ namespace WEB
         {
             objDtoMolde.FK_IM_Cod = id;
             objDtoMolduraxUsuario.PK_IMU_Cod = codMXU;
+
             objCtrMolduraxUsuario.obtenerMXUxCodigo(objDtoMolduraxUsuario);
-            return objCtrMolde.ExistenciaMolde(objDtoMolde)&& objCtrMolde.CantidadMoldesxMoldura(objDtoMolde)>0&&objDtoSolicitud.VS_TipoSolicitud!= "Personalizado por diseño propio"&&objDtoSolicitud.FK_ISE_Cod>=9&& objDtoSolicitud.FK_ISE_Cod <11&&objDtoMolduraxUsuario.IMU_MoldesUsados==0;
+            bool existen= objCtrMolde.ExistenciaMolde(objDtoMolde) && objCtrMolde.CantidadMoldesxMoldura(objDtoMolde) > 0 && objDtoSolicitud.VS_TipoSolicitud != "Personalizado por diseño propio" && objDtoSolicitud.FK_ISE_Cod == 9 && objDtoMolduraxUsuario.FK_IMXUE_Cod==6 && objDtoMolduraxUsuario.IMU_MoldesUsados == 0;
+            return existen;
         }
         protected Boolean HayMoldesEnUso(int codMXU)
         {
@@ -134,6 +136,7 @@ namespace WEB
                     gvPersonalizado.DataBind();
                 }
             }
+
         }
         public int obtenerEstado(string codigo)
         {
@@ -147,10 +150,18 @@ namespace WEB
             {
                 
                 DropDownList ddlMXUEstados = (e.Row.FindControl("ddlEstados") as DropDownList);
-                ddlMXUEstados.DataSource = objCtrMXUEstado.ListarEstados(e.Row.Cells[5].Text.ToLower());
-                ddlMXUEstados.DataTextField = "VMXUE_Nombre";
-                ddlMXUEstados.DataValueField = "PK_IMXUE_Cod";              
-                ddlMXUEstados.DataBind();
+
+                string estado = e.Row.Cells[5].Text.ToLower();
+                var estados = objCtrMXUEstado.ListarEstados(estado);
+
+                if(estados.Tables.Count > 0)
+                {
+                    ddlMXUEstados.DataSource = estados;
+                    ddlMXUEstados.DataTextField = "VMXUE_Nombre";
+                    ddlMXUEstados.DataValueField = "PK_IMXUE_Cod";
+                    ddlMXUEstados.DataBind();
+                }
+
                 int idMoldura = Convert.ToInt32(e.Row.Cells[2].Text);
                 objDtoMolde.FK_IM_Cod = idMoldura;                
                 int idE = Convert.ToInt32(e.Row.Cells[1].Text);
@@ -259,6 +270,7 @@ namespace WEB
                 objCtrMolduraxUsuario.DevolverMoldes(objDtoMolduraxUsuario);
                 objCtrMolde.AumentarMoldes(objDtoMolde);
                 CargarMolduras(sol);
+                
             }
             if (e.CommandName == "Incidencia")
             {
@@ -309,6 +321,7 @@ namespace WEB
             gvPedidos.DataBind();
             CargarMolduras(lblid.Text);
             UpdatePanel1.Update();
+            btnComenzar.Visible = false;
         }
 
         protected void btnAumentarDias_Click(object sender, EventArgs e)

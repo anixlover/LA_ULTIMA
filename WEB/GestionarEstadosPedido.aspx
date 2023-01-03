@@ -123,7 +123,7 @@
                                         <asp:BoundField DataField="IMU_MoldesUsados" HeaderText="Moldes usados" />
                                         <asp:TemplateField HeaderText="Acción">
                                             <ItemTemplate>
-                                                <asp:Button runat="server" Text="Asignar Moldes" data-toggle="modal" data-target="#modalCantidadMoldes"
+                                                <asp:Button ID="btnAsignar" runat="server" Text="Asignar Moldes" data-toggle="modal" data-target="#modalCantidadMoldes"
                                                     Visible='<%# ExistenMoldes(int.Parse(Eval("PK_IM_Cod").ToString()),int.Parse(Eval("PK_IMU_Cod").ToString())) %>' CommandName="Asignar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-warning" />
                                                 <asp:Button ID="btnDevolver" runat="server" Text="Devolver Moldes" Visible='<%#HayMoldesEnUso(int.Parse(Eval("PK_IMU_Cod").ToString())) %>' CommandArgument='<%# Container.DataItemIndex %>' CommandName="Devolver" CssClass="btn btn-primary" />
                                                 <asp:Button ID="btnIncidentes" runat="server" Text="Qué ocurrió?" Visible='<%# Incidente(Eval("FK_IMXUE_Cod").ToString()) %>' data-toggle="modal" data-target="#modalIncidendia" CommandArgument='<%# Container.DataItemIndex %>' CommandName="Incidencia" CssClass="btn btn-primary" />

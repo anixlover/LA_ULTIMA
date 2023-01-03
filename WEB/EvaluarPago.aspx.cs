@@ -136,6 +136,7 @@ namespace WEB
                     else if (dtosol.VS_TipoSolicitud == "Personalizado por diseño propio")
                     {
                         ctrsol.Actualizar_Estado_SolicitudPDP(dtosol);
+                        ctrMXU.Actualizar_Estado_MXU(dtomxu);
                         ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "mensaje", "swal({type: 'success',title: 'Actualizado Correctamente!',text: 'Datos ENVIADOS!!'}).then(function(){window.location.href='Administrar_Pedido.aspx'})", true);
                     }
                     _log.CustomWriteOnLog("EvaluarPago", "DDL = " + ddl_decision.Text);
